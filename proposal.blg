@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: proposal.aux
+The style file: abbrv.bst
+Database file #1: research.bib
+A bad cross reference---entry "LeCun12"
+refers to entry "DBLP:conf/eccv/2012w1", which doesn't exist
+A bad cross reference---entry "LeRMDCCDN12"
+refers to entry "DBLP:conf/icml/2012", which doesn't exist
+A bad cross reference---entry "Yann98"
+refers to entry "DBLP:conf/shape/1999", which doesn't exist
+A bad cross reference---entry "CiresanIJCAI11"
+refers to entry "DBLP:conf/ijcai/2011", which doesn't exist
+A bad cross reference---entry "RanzatoNIPS06"
+refers to entry "DBLP:conf/nips/2006", which doesn't exist
+A bad cross reference---entry "KrizhevskyNIPS12"
+refers to entry "DBLP:conf/nips/2012", which doesn't exist
+A bad cross reference---entry "Hinton12"
+refers to entry "DBLP:series/lncs/7700", which doesn't exist
+A bad cross reference---entry "BengioICML09"
+refers to entry "DBLP:conf/icml/2009", which doesn't exist
+A bad cross reference---entry "LarochelleB08"
+refers to entry "DBLP:conf/icml/2008", which doesn't exist
+A bad cross reference---entry "NairH10"
+refers to entry "DBLP:conf/icml/2010", which doesn't exist
+A bad cross reference---entry "LeNCLPN11"
+refers to entry "DBLP:conf/icml/2011", which doesn't exist
+A bad cross reference---entry "LeCunBOM12"
+refers to entry "DBLP:series/lncs/7700", which doesn't exist
+A bad cross reference---entry "BergstraBBK11"
+refers to entry "DBLP:conf/nips/2011", which doesn't exist
+A bad cross reference---entry "GrosseRKN07"
+refers to entry "DBLP:conf/uai/2007", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/eccv/2012w1"
+Warning--I didn't find a database entry for "DBLP:conf/icml/2012"
+Warning--I didn't find a database entry for "DBLP:conf/shape/1999"
+Warning--I didn't find a database entry for "DBLP:conf/ijcai/2011"
+Warning--I didn't find a database entry for "DBLP:conf/nips/2006"
+Warning--I didn't find a database entry for "DBLP:conf/nips/2012"
+Warning--I didn't find a database entry for "DBLP:series/lncs/7700"
+Warning--I didn't find a database entry for "DBLP:conf/icml/2009"
+Warning--I didn't find a database entry for "DBLP:conf/icml/2010"
+Warning--I didn't find a database entry for "DBLP:conf/icml/2011"
+Warning--I didn't find a database entry for "DBLP:conf/icml/2008"
+Warning--I didn't find a database entry for "DBLP:conf/nips/2011"
+Warning--I didn't find a database entry for "DBLP:conf/uai/2007"
+Warning--there's a number but no volume in davies1979cluster
+Warning--empty journal in dunn1973fuzzy
+Warning--empty publisher in Hinton12
+Warning--empty publisher in LeCunBOM12
+(There were 14 error messages)

@@ -1,0 +1,16 @@
+﻿\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+     \hline
+     % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+     method　&　　　Time　　　&　　　Scale　　　　&　　Rotation　　　&　Blur 　　　&　　　Illumination　　　&　　　Affine\\
+
+    Sift　　　&　　　common　　&　　best 　　　&　　　best 　　　　&　　common　　&　　 common　　　&　 　　good\\
+
+    PCA-sift　　&　　good　　&　　　　good　　　&　　　good　　　&　　　best　　　&　　　good　　　　&　　　　best\\
+
+    Surf　　　　&　　best　　　&　 　　common　　&　　common 　　&　　good　　　&　　　 best　　　　 &　　　　good\\
+     \hline
+   \end{tabular}
+  \caption{}\label{}
+\end{table}

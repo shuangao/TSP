@@ -1,0 +1,68 @@
+\documentclass[12pt,onecolumn]{article}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{subfig}
+\geometry{left=2.0cm,right=2.0cm, top=2.0cm, bottom=2.0cm}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{leftidx}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfig}
+\usepackage{tikz}
+\usepackage{ifthen}
+%\usepackage{subcaption}
+\usepackage{caption}
+\newcommand\figref[1]{Figure \ref{#1}}
+\linespread{1.5}
+\author{Shuang Ao \\
+Supervisor: Professor Charles Ling
+}
+\title{
+\large\textbf{Unsupervised Feature Learning For Image Recognition}
+}
+\frenchspacing
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\begin{abstract}
+In image recognition, the success of machine learning algorithm is mainly depends on the image representation. Different representations can lead to different views of the image data. Although, the specific domain knowledge can help us for representation, sophisticate method for image representation is still crucial. In this TSP, firstly the background knowledge is introduced, including some basic feature extraction methods. Deep learning, which is introduced in Section 2, is the most popular method for feature extraction technique which has gained great reputations in both academic and industrial area. Finally, I present a novel method that is inspired by the idea of deep learning. In this method, I try to use patch combination as well as some ranking methods for image representation. The defects of this method can be my future work.
+
+\end{abstract}
+
+\section{Introduction to Image Filter}\label{sec:intro}
+\input{intro.tex}
+    \subsection{Kernel Based Method for Image Recognition}
+\input{kbased.tex}
+\newpage
+\section{Deep Learning Feature Representation}\label{dl}
+    \input{deeplearning.tex}
+ \newpage
+\section{K-means Feature Representation}\label{km}
+    \input{kmeans.tex}
+\newpage
+\section{Conclusion}
+ \input{conclusion.tex}
+ %\input{mutidimcluster.tex}
+ %\input{imagextend.tex}
+ %\input{SURFvsSIFT.tex}
+\newpage
+
+\bibliographystyle{abbrv}
+\bibliography{research}
+
+%\newpage
+%\appendix
+%\section*{Appendix}
+%\subsection{cool}
+
+%\renewcommand{\appendixname}{Appendix~\Alph{section}}
+
+   % \input{appendix.tex}
+
+\end{document}

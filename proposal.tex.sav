@@ -1,0 +1,641 @@
+\documentclass[11pt,onecolumn]{article}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{left=2.0cm,right=2.0cm, top=2.0cm, bottom=2.0cm}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{leftidx}
+\linespread{1.3}
+\author{Yan Luo \\
+Supervisor: Professor Charles Ling
+}
+\title{
+\large\textbf{{TSP}}
+}
+\frenchspacing
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\begin{abstract}
+In this article, we will mainly discuss  some important potential research areas related to health informatics solutions for diabetes and our proposed research methodologies and expected contributions and results.
+\end{abstract}
+
+\section{Introduction to Health Informatics}
+\label{sec:intro}
+Many definitions of health informatics as a discipline can be found in the literature aiming at comprehensive and accurate descriptions~\cite{haxuFuture2010}, \cite{embiCRICallenges2009}, \cite{RusstenChallenges1997}.  Haux~\cite{haxuFuture2010} refers health informatics as the discipline, dedicated to the systematic processing of data, information domain and knowledge in medical and health care. Another similar definition is provided by Altman~\cite{RusstenChallenges1997}, that is, health informatics is the study of the concepts and conceptual relationships within biomedical information and how they can be harnessed for practical applications.   Due to the a variety of noisy and fuzzy forms of medical and biomedical knowledge and data representation,  conducting such research is normally complex, resource intensive and cross-sectional.  Consequently, the importance of such research is significant since it contributes to better medicine and health for individual.
+
+Nowadays, health care continuously changes along with the development of technologies and practice of health are in continuous transformation, from early computer-based decision support system to nowadays ubiquitous computing and cloud computing~\cite{haxuFuture2010}.  Through these changes and development, health  informatics has tremendously changed and improved and become one of the medicine and health care bases instead of a ``nice-to-have`` add-on.  We can hardly imagine medicine and health care without information and communication technology (for example, diagnosis without accessing patient database or computer tomography).   Meanwhile, the increasing expectation and requirements of health care also new challenges and opportunities for health informatics research.
+
+Haux~\cite{haxuFuture2010},  Altman~\cite{RusstenChallenges1997}, and Embi~\cite{embiCRICallenges2009} survey the health medical literature and summarize some potential research fields and challenges:  1)Seamless interactivity with automated data capture and storage for patient care 2)Knowledge-based decision-support for diagnosis and therapy  3)Patient-centered data analysis and mining 4)Informatics diagnostics 5)Informatics therapeutics 6)Informatics capability-enhancing extensions, both mental and physical, to overcome functional deficits and usability study 7)Systematization of medical/health knowledge 8) Analysis of medical and health knowledge 9)Identifying new disease patterns 10)Modelling the virtual human 11)Elaborating concepts for appropriate health data back architectures and for its organizations 12)Elaborating concepts for patient-centered health information system architectures 13)Automated, individualized health advice and education 14)Analysis, creating and/or extending theories, concepts, and methods 15)Systematic evaluation, from lab experiments to field tests.  Among these research areas, some are more suitable for computer scientist research with inter- and multidisciplinary collaboration such as patient-centered data analysis and mining, disease or daily activates pattern recognition, modelling the virtual human, system usability study and/or modelling the virtual human (Virtual Physiological Human). We will explore the related literate for these areas in Section~\ref{sec:lietraturereview}. In addition, due to constrained research resource and time limitation,  it would be feasible to pursue such research directions under only certain specific disease context.  Our research focus is related to diabetes, in the next subsection, we will further introduce the health informatics solution for diabetes.
+
+\subsection{Health Informatics Solutions for Diabetes}
+Human bodies get energy by making glucose from carbohydrates. Insulin as a peptide hormone, produced by beta cells of the pancreas, and is central to regulating carbohydrates metabolism in the body.
+While type 1 diabetes (T1D) is a disease in which the pancreas does not produce insulin. Glucose builds up in your blood instead of being used for energy. Type 2 diabetes (T2D) is a disease in which your pancreas does not produce enough insulin, or your body does not properly use the insulin it makes~\cite{CDA}, \cite{ITD2BKaufman2011}.
+
+In Canada, diabetes currently affects the health of 2.4 million Canadians (Public Health Agency of Canada, 2011); and it is estimated that T2D makes up 90 to 95\% of diabetes cases. The Canadian Diabetes Association (CDA) believes that self-monitoring of blood glucose is an important and essential tool for the care of individuals with diabetes~\cite{CDA2011}. In fact, T2D can be greatly influenced and can even be prevented by healthy lifestyle choices ~\cite{DiabesENGL2011}. Hence, the risk of developing T2D complications can be reduced dramatically by adopting healthy behaviours and implementing self management plans following the guidance of a health care team~\cite{counterargumentAndrew2002}, \cite{lookahead2010}. Clinical practice guidelines have recommended that education, personalized feedback, monitoring patient progress, and encouraging a healthy lifestyle are essential to promote long term adoption of healthy behaviour strategies in patients with T2D~\cite{CDA2011}. However, adopting and maintaining lifestyle changes as an important component in managing diabetes is challenging for both patients and clinicians~\cite{petrall2007}. For patients, the overwhelming complexity of self-management presents an often insurmountable obstacle to positive lifestyle change~\cite{engagingJacob2010}. While clinicians strive to provide support tailored towards individual needs, the time-constraints of a general practice do not allow for 24/7 real-time monitoring and personalized advice, leaving a patient a sudden change in glucose level in a potentially life-threatening situation.
+
+The rapid development of ubiquitous computing and technologies has provided an opportunity to provide patients and providers with tailored and real-time support for healthy behaviors~\cite{healthRussell2009}. The advantages of mobile diabetes management systems are that measurements can be taken anywhere~\cite{FactorsNicol2011} with the help of wireless technology, bidirectional automatic data transfer provides real-time self-management support. Such kind of technology can also be used to empower and engage patients to sustain self-care and adopt new practices as needed by providing instantaneous feedback from portable devices  \cite{itKaufman2011}, \cite{dataMaelaine2011}, \cite{remoteMonitoringMelanie2011}. In the subsequent section, we will review more relevant researches in details. In addition to the academic researches, there are also products and apps in the market now. We also summarize the characteristics of state-of-art eHealth systems for diabetes and listed in appendix~\ref{sec:relatedtechs}.
+
+Although there are many promising research results and applications in the market, it is still very challenging to design an intuitive, intelligent, interactive T2D assistant and management system with respect to the efficient, usability, and cost. In another word, the potential improvement space is very large~\cite{FeaturesChomutare2011}. Components in the context of computer science domain like data mining,  imagine pattern recognition, recommendation system, information visualization can be explored and integrated into T2D management system.  For example, data mining can discover and track patients' daily patterns and determine which action to perform would decrease blood glucose level most effective.  Or, personalized recommendation system can recommend food items which are most suitable for controlling blood glucose level as well as keeping the daily nutrition balance.
+In this article, we will mainly discuss  some important potential research areas related to health informatics solutions for diabetes and our proposed research methodologies and expected contributions and results.
+
+
+\section{Literature Review On Ubiquitous Services for Diabetes Management System}
+\label{sec:lietraturereview}
+Nowadays, Web technologies and mobile devices have been emerging as an integral part of everyday life activities. As for their application in medical informatics, the technological advances could make medical services overcome time and location barriers thus provide ubiquitous, real-time, individualized medical treatments \cite{SurveyOnUbiqitous},\cite{designingMobileSupportLynne2011},\cite{selfManageSantosh2008}. In fact, researchers have consistently shown that such ubiquitous healthcare services could be utilized to enhance the quality of life for people living with chronic illnesses (such as, heart disease, cancer, diabetes, and so on.) \cite{FeaturesChomutare2011}, \cite{designingMobileSupportLynne2011}.
+
+It is well known that the healthcare for Type-2 diabetes is mostly focused on life-style changes and self-management, which are typically managed by increasing exercise and diet modification. If blood glucose levels are adequately lower than certain levels, medications such as metformin or insulin might not be needed.
+In fact, self-management is always a challenge for Type-2 diabetic patients since the control is contingent on numerous complex factors and behaviors. One promising solution (especially with the rapidly development of smartphones and tablets) is to integrate ubiquitous healthcare services into diabetes self-management, which could bring more effective behavioral changes and continuous health monitoring~\cite{CDA2011}.
+
+In this section, we will mainly discuss the characteristics and challenges related to ubiquitous diabetes applications.
+
+\subsection{Features and Feasibility}
+We first need to fully understand \emph{health features} of such type of system, which are aspects of the health conditions that need to be managed and monitored in order to best control the chronic illness~\cite{FeasibilitySmith2011}.
+Smith and Schatz~\cite{FeasibilitySmith2011} identify 14 health features, which are Access to care, Air quality, Blood pressure, Blood glucose levels, Depression, Diet, Education, Heart rate, Medication, Physical activity, Respiration, Stress, and Subnfstance abuse respectively.
+In terms of diabetes, the most relevant health features are listed as follows (other similar health features for diabetes can also be found in \cite{FeaturesChomutare2011}, \cite{TangOnlineDiabetes2012}, \cite{QuinnWellDoc2008}, \cite{tsaiPmEB2007}) :
+\begin{itemize}
+\item \emph{Blood Glucose}. Blood glucose level is the most important feature for diabetes. This feature is typically collected via either stand-alone glucometer or monitors integrated into the phone~\cite{FeasibilitySmith2011}, \cite{MobileCommunicationJae2009}. The readings of stand-alone glucometer can be then transmitted to mobile devices wirelessly or using USB cable. (most glucometers nowdays follow Bluetooth communication specification made by Continua Health Alliance). To give an example, Cho et al. \cite{MobileCommunicationJae2009} employ an adaptor for glucose measurement used with a standard mobile phone and then upload to the server. Their research results indicate a good levels of satisfaction and adherence using the new technologies to manage the blood glucose level. In the future, we would image the appearance of wearable sensors measuring glucose level without actually taking blood glucose sample.
+\item \emph{Access to care}. Access to care mainly refers to the capability of being able to communicate with the health provider in the case of questions or emergency. This can be done via voice, message, E-mail between mobile devices and mobile devices or between Mobile devices and Web Portal or between mobile devices and mobile devices \cite{MobileCommunicationJae2009}, \cite{dataMaelaine2011}, \cite{designingMobileSupportLynne2011},\cite{establishmentKwon2004},\cite{mobiletechandDataKouris2011},
+    and \cite{novelKatz2008}. This feature is very important for all self-management systems. Patients are motivated to upload their data since they know that all data are carefully taken care by health providers and they can receive valuable feedback.
+    As for health alerts, the location-enabled mobile device can also report patient's location to health provider to deal with the emergent situations.
+\item \emph{Blood Pressure}. Blood Pressure nowadays can be measured using wireless communication enabled sphygmomanometer or other wearable devices like Fitbit.
+\item \emph{Diet}. Diabetic patients mainly need to monitor carbohydrates in their meal. But other nutrition information such as fat, sodium could also affect their blood glucose level. Research has also shown that mobile nutritional support is effective \cite{FeasibilitySmith2011}, \cite{MobileCommunicationJae2009}.
+\item \emph{Education}. Education is very important for diabetes patients, and mobile devices have been proven very useful in this area \cite{FeasibilitySmith2011}. However, according to the best of our knowledge, personalized education is a big challenge and largely unexplored.
+\item \emph{Physical Activity}. Physical activity is typically measured by exercise intensity and time or step count recording. Step counts device is a much more convenient way to use and to calculate the calories consumption. Stuckey \cite{dataMaelaine2011}, \cite{remoteMonitoringMelanie2011} et al. conduct The Diabetes and Technology for Increased Activity (DaTA) study to test the effectiveness of a lifestyle intervention driven by self-monitoring of blood glucose (BG), blood pressure (BP), physical activity (PA), and weight using the smart phone and wireless communication technologies. Their research results show that self-monitoring of the risk factors for metabolic syndrome (such as, hypertension and dysglycemia) and increased physical activity improved the participant's cardiovascular disease risk profile. Furthermore, with the help of hourly step counts information and aerobic step counts, future systems can make more specific and intelligent recommendations to improve patient's self management.
+\item \emph{Substance abuse}. Substance abuse normally refers to tobacco and alcohol. Mobile devices could use message, reminder, or alert functionality to encourage smoking cessation and reduction in alcohol.
+\item \emph{Weight}. Weight is normally related to BMI measurement. Bluetooth-enabled scale is able to communicate with mobile phones.
+\end{itemize}
+
+On the aspect of the evaluation of feasibility of ubiquitous diabetes, Liang et al. \cite{EffectLiang2011} reviews 22 clinical trails that assessed the effect of mobile phone intervention on blood glucose control of patients with diabetes. Most results  show that significant reduction glycosylated hemoglobin  $A1_{c}$ values and / or other health metrics in diabetes patients when comparing the mobile phone intervention group with control group.  We list several landmark research papers and clinical trails which represent the typical research methodologies and evaluation procedure of ubiquitous diabetes management research:
+
+\begin{itemize}
+\item  Tang et al.~\cite{TangOnlineDiabetes2012} evaluated an online disease management system supporting patients with uncontrolled T2D.  It is a randomized controlled trail of 415 patients with T2D.  Patients  in intervention group (INT) need to upload their 1)glucometer 2)nutrition and exercise logs3)insulin record.  Nurses and physicians will remotely provide glucose summary report, personalized text and video, and diet advice to INT group.   Its clinical trail results shown that INT group had significantly reduced A1C at 6 months compared to usual care (UC) (-1.32\% vs -0.66\%). While for the 12 months duration, the difference was not very significant (-1.14\% INT vs -0.95\% UC). The main potential reason  was UC group could have stimulated behavioral changes due to ``Hawthorne effect`` (changes influenced by being observed in a study).
+\item  Quinn et al.~\cite{QuinnWellDoc2008} conducted 3-month study. The INT group receives cell phone-based software which provide real-time feedback on patients' blood glucose level, medication regiments, incorporated hypo- and hyperglycemia treatment algorithm, and requested additional data (). The system sent computer-generated logbooks with suggested treatment plans to INT group.  They claim that adults with T2D achieved statistically significant improvements in $A1_{c}$ as well as satisfaction.
+\item  Noh et al.~\cite{NohWebbased2010} designed and developed a web-based ubiquitous information system for diabetes education.  They compared the INT  group using this system with conventional education for diabetes patients.  Their results shown that blood glucose level and $A1_{c}$ were significantly decreased over time in the INT group but not in the control group.
+\item  Spring et al.~\cite{springMultiBehavior2012} argue that some patients exhibit multiple chronic disease risk behaviors. The literature provide little information about advice that can maximized simultaneous health behavior changes.  They randomized 204 adults with elevated saturated fat and low fruit and vegetable, high sedentary leisure time, and low physical activity to 1 to 4 treatments: increase fruit/vegetable intaken and phyc. INT group used a handheld device to record and upload
+\item  In the pilot-controlled clinical trial conducted by Katz and Nordwall~\cite{novelKatz2008} use Bluetooth,  cell-phones, and server to facility and self-management process. More importantly, their system translates scientifically supported knowledge for chronic disease management into action by providing easily followed daily coaching using the patients' data. It is data-driven system because the feedback messages are selected by the system  based on the patient's currently submitted and recent historic data. However, their feedback is simple generated using domain knowledge and needs human involvement to review the data and provide personalized feedback. It is not feasible when the data scale is very large.
+
+\end{itemize}
+We also surveyed the state-of-art products and applications in the market,  by analyzing the specifications of these products and wearable health-tracking sensors, it is further supported that the \emph{health features} mentioned above can be managed by nowadays' mobile technologies and Web technologies.  For example, product like Fitbit is a very small wearable health-tracking (wristband) that can manage your physical activity, diet, and sleeping in a very convenient manner with the assistance of mobile app.  More information about the characteristics of the recent health technologies can be found in the appendix~\ref{sec:relatedtechs}. Also, the new touch-based or gesture-recognition-based interfaces are significant improvements to the health data capturing and there is a significant trend using these techs. In the Apple App Store, according to survey done by Chomutare et al. \cite{FeaturesChomutare2011}, in July 2009, they found 60 diabetes applications on iTunes for iPhone; by February 2011 the number had increased by more than 400 \% to 260 apps.  Other mobile platforms reflects a similar trend.  As a summary,  ubiquitous diabetes management as a very promising direction has been drawn much attentions among the industry.
+
+
+Although the clinical trails and products mentioned above show that it is technically feasible to improve diabetes self-management using mobile devices and Web technology. However, most systems are very similar in their functionalities and implementations, and there are obvious gaps between the evidence-based recommendations and the functionalities. Furthermore, in spite of the efficiency of these clinical trails, most of them are not cost-effective. Participants in the clinical trails still take large effort to synchronize their daily activities data, especially for the meal information since people can eat large variety of foods at any time and any places. Care teams on the server-side need to check and review patients' data and provide feedback. It is still challenging to design and develop a intuitive, intelligent, and interactively ubiquitous diabetes management system.
+
+Next, we will discuss the limitations, barriers, and challenges of current system and clinical trails in details.
+
+
+\subsection{Barriers and Challenges}
+
+\subsubsection{Usability}
+The main advantage of using mobile devices for diabetes self-management is its usability and convenience for both patient and health providers when comparing to traditional paper-based blood glucose recording and management.  However, the widespread success of ubiquitous diabetes management doesn't mean the usability has been well studied. Lim et al.~\cite{SurveyOnUbiqitous}, Lyles et al.~\cite{QualitativeCourtney2011}, Krishna and Boren~\cite{selfManageSantosh2008} and Smith and Schatz \cite{FeasibilitySmith2011} all indicate that the usability is the main difficulty and challenge for mobile diabetes application. The usability issue is especially important since most diabetic patients are elder and some are associated with vision impairment and reduced dexterity.
+
+Most research designed and developed their systems only rely on heuristics. In fact, there is still no whitebook or guideline for designing and developing a efficient diabetes self-management system at this point. Most clinical trails reviewed in this article only focus on pilot study design, intervention methods, and clinical outcomes, the research on systematic Human Computer Interaction (HCI) study is rare. Thus, many participants express their frustrations or even withdraw from the study due to the improper UI design, technical problems, and/or feeling intrusion into their daily life. As such, it is very important to design the UI as simple and effective as possible.
+
+Research conducted by Lopze~\cite{lopezTelemangement2009} is one of the few papers we surveyed focusing on usability study. In their study, they evaluated a mobile phone based remote monitoring system for diabetic hypertensive patients. They used HCI evaluation metrics like Content, Accessibility, Visibility, Autonomy, Usefulness, Navigation, Convention, Readability, and Feedback. Usability issues found during study were prioritized according to severity. As conclusions, they identified 22 webite UI issues and 24 mobile phone issues, studying and solving these issues could be beneficial for future researchers.
+
+In our opinions, the usability of such type of system could be further improved by employing information visualization and gamification. According the best of our knowledge, none researches on these two areas are observed in the ubiquitous diabetes literature.
+
+In an ubiquitous diabetes management system, large scale of textual or numeric health data are generated and synchronized with remote servers. Parsing these data could bring large burden to both patients and physicians.
+Such load may be mitigated using information visualization, which takes advantage of human perceptual abilities to amplify cognition~\cite{ware2012InformationVisualization}. A properly designed visual representation and visual analytic tool, as opposed to a textual or numeric representation, allows one to understand a greater amount of data in a much shorter time. For example, time-series blood glucose history can be visualized using trend charts and food items can be color coded to guide users dietary activity proactively.
+This could be further improved by combining data mining and information visualization. The hidden patterns or knowledge could be first found by data mining approaches and then visualized and presented to users.
+
+For diabetic patients, uploading the daily activities data is a tedious and boring process. Especially for glucose level, they need to get real blood sample using glucometer. The biggest motivation for performing this daily uploading data is the concern of their health. However, that is a long-term goal and sometimes patients need some shot-term incentives . more importantly, to make such process as a game, which is termed as gamification. Gamification is the use of game thinking and game mechanics in a non-game context in order to engage users and solve problems. Gamification is used in applications and processes to improve user engagement, Return on Investment, data quality, timeliness, and learning. Most common strategies for gamifying is to provide rewards for players for accomplishing desired tasks. Types of rewards include points, achievement badges or levels, the filling of a progress bar, and providing the user with virtual currency. If gamifying is applied, patients could get rewards or points for uploading their data and blood glucose level control achievement can be also shared via social media. As a results, these short-term incentives could effectively relief the burden of daily data uploading routine.
+
+\subsubsection{Automated Daily Activities Data Capturing}
+As mentioned in previous section, most daily health data can be automatically captured by a variety of sensors (such as glucometer, pedometer, blood pressure monitor, etc). More conveniently, small wearable sensors like Fitbit can collect comprehensive health data about your body. However, according to our literature review and the feedback from our preliminary clinical trail, how to effectively and conveniently record patients' everyday diet is the most challenges part. We quote a feedback from one of our participant ``Diet entry is cumbersome: Eating is complicated! We eat a variety of things, from a variety of places at a variety of times, this is what makes eating fun, enjoyable, and difficult to record.``
+
+Researches on facilitating diet entry process are rarely found in the literature. Most systems employ basic information retrieval strategy, that is, given a food database, user will query the relevant food items based on keywords matching. Patients also need to select the most retrieved food items. Such kind of process could bring large burden to diet recording, especially when they have to record complex meals.
+Furthermore, the irrelevant or inaccurate food input brings noise to further data analysis.
+
+We believe this issues can be efficiently solved using food image pattern recognition, text optical recognition and / or text mining. Patients' could be able to just take pictures on their meal or receipts to automatically obtain the nutrient information. We will further discuss these two research areas in later sections.
+
+
+\section{Action Mining}
+Most systems we reviewed in this section merely provides a channel between patients and health providers. Large amount of valuable knowledge, patterns, and  are hidden in data without being discovered.  As mentioned in Section~\ref{sec:intro}, Patient-centered data analysis and mining is a very promising researching area.
+
+Data mining is about extracting interesting and useful patterns or knowledge from raw data. However, merely finding patterns is not enough. You must be able to respond to the patterns, to act on them, ultimately turning the actions into value~\cite{jiang2005MiningPattern},\cite{miningoptimal2002Charles}.  Ideally, we have the grand knowledge about how the action would generate values. For example, suppose we can partition the customer base $C$ into $k$ parts $C_1$, $C_2$, $C_3$, $\ldots$, $C_k$ to maximize the sum of the optima $\sum_{1}^{k}max_{x\in D} \sum_{i \ in C_j} C_i \cdot x$, where $C_i \cdot x$ denotes the utility of a decision $x$ on a customer.  However, in some applications, such total knowledge is not available, and only the partial knowledge that certain ``actions`` affect certain ``features`` may be known.
+
+We think there are two key issues in the action mining area: 1) modelling and predicting users' behaviour and 2) the utility of actions.
+In this section, we will discuss previous works and relevant models for solving these two problems.
+
+\subsection{Hidden Markov Model}
+We are always interested to find patterns which appear over a space of time. These patterns occur in many areas; the pattern of commands someone uses in instructing a computer, sequences of words in sentences, the sequence of phonemes in spoken words, progress of disease, student learning behaviours - any area where a sequence of events occurs could produce useful patterns.  Normally, patterns do not appear in isolation but as part of a series or sequence in time - this progression can sometimes be used to assist in their recognition process. A common assumption is that the process's state is dependent only on the preceding $N$ states - then we have an order $N$ Markov model. The simplest case is $N=1$. Various examples exists where the process states (patterns) are not directly observable (hidden), but are indirectly, and probabilistically, observable as another set of patterns. An general discrete Hidden Markov Model can be characterized as the following~\cite{rabiner1989HMMTutorial}:
+\begin{itemize}
+\item $N$, the number of hidden states in the model. We denote the individual state as $S = \{S_{1}, S_{2}, \ldots, S_{N}\}$, and the state at time $t$ as $q_{t}$
+\item $M$, the number of distinct observation symbols per state. We denote the individual symbols  as $V = \{v_{1}, v_{2}, \ldots, v_{M}\}$
+\item $A = {a_{ij}}$ where
+\[
+a_{ij} = P[q_{t+1} = S_{j} | q_{t} = S_{i}]
+\]
+\item The observation symbol probability distribution in state $j, B = \{ b_{j}(k)\}$, where
+\[
+b_{j}(k) = P[v_{k} | q_{t} = S_{j}]
+\]
+and $v_{k}$ is the observation at time $t$.
+
+\item The initial state distribution $\pi = P[q_{1} = S_{i}]$,  $1 \ge i \le N$
+\end{itemize}
+
+That is, given appropriate values of $N$, $M$, $A$, $B$, and $\pi$, the HMM can be used as a generator to give observation sequence
+\[
+O = O_{1} O_{2}, \ldots, O_{T}
+\]
+It can be seen that $N$ and $M$ are pre-defined parameters based on specific scenarios while $A$,  $B$, and $\pi$ are parameters needed to estimated.   Thus, we denote the HMM model $\lambda$ as
+\[
+\lambda = (A, B, \pi)
+\]
+HMM is mostly applied to speech recognition~\cite{rabiner1989HMMTutorial}. In recent years, a number of researchers have had success in applying HMM generation techniques to learning various types of data.  For example,  Jackson et al. ~\cite{christopher2003MultistateMarkovModels} presents a general HMM for simultaneously estimating disease progression transition rates and probabilities of stage misclassification.  Pardos and Heffernan~\cite{pardos2012HMMIntelligentTutoringSystem}combines HMMs and bagged decision trees to leverage rich features of user and skill from an intelligent system. Kinnebrew and Biswas~\cite{kinnebrew2011SequenceMining}  proposed an exploratory data mining methodology for assessing and comparing students' learning behaviors in a computer-based learning environment. Farhadi et al.\cite{farhadi2011AlertCorrelation}  used HMM to predict and characterize the next attack class in an intrusion detection system.
+
+\subsubsection{Related Researches Problems in HMM}
+According to Rabiner~\cite{rabiner1989HMMTutorial},  HMM has three basic research problems that must solved in order to be applied to real-world applications. We only describe the basic ideas in this article, more details can be found in \cite{rabiner1989HMMTutorial}.
+\begin{itemize}
+\item  Model Evaluation. Given the observation sequence $O = O_{1}O_{2} \ldots O_{T}$ and a model $\lambda  = (A,B,\pi)$, how do we efficiently computer $P(O|\lambda)$. That is, given the model, how do we efficiently computer the probability of the observation sequence.  We can treat his issue as a evaluation problem. If we have several candidate HMM models,  solution to this problem allows use to choose the model which best matches the observations (i.e., the highest likelihood).  We  could exhaustive calculate the probability for every possible combination of hidden state sequence for  each candidate model, which could take $O(2T \cdot N^{T})$. This calculation is definitely infeasible.  Thus,  a more efficient approach called forward algorithm is proposed. The general idea of forward algorithm is utilized the time-invariant of possibility (\emph{Markovian} process) to inductively solve $P(O|\lambda)$.  We first define a partial observation sequence at time $t$ as $O_{1}$, $O_{2}$, $\ldots$, $O_{t}$, and its probability given the model $\lambda$ is
+    \[
+    \alpha_{t}(j) = P(O_{1}, O_{2}, \ldots, O_{t}, q_{t} = S_{j} | \lambda)
+    \]
+    The general induction process of forward algorithm is given as follows:
+                \begin{enumerate}
+                \item Initialization:
+                \[
+                    \alpha_{1}(i) = \pi_{i}b_{i}(O_{1}), \quad 1 \le   i \le N
+                \]
+                \item Induction:
+                \[
+                    \alpha_{t+1}(j) = \biggr[ \sum_{i=1}^N \alpha_{t}(j)a_{ij} \biggr] b_{j}(O_{t+1}), \quad 1 \le t \le T - 1, \quad 1 \le j \le N
+                \]
+                \item Termination:
+                \[
+                    P(O|\lambda) = \sum_{i=1}^N \alpha_{T}(i).
+                \]
+                \end{enumerate}
+                We can see that this forward algorithm process only requires on the order of $N^2T$ calculations rather than $2TN^T$.
+\item Uncover the hidden part. Given both the observation sequence $O = O_{1}O_{2} \ldots O_{T}$, and a model $\lambda = (A,B,\pi)$, how do we choose a corresponding state sequence $Q=q_{1}q_{2} \ldots q_{T}$ which is optimal. In practice, unlike the previous problem which an exact solution can be given, people normally use optimality criterion to solve this problem as best as possible. A formal technique for finding this best state sequence is called \emph{Viterbi algorithm}. It first defines the best score along a single path:
+                \[
+                \delta_{t}(i) = \underset{q_{1},q_{2}, \ldots, q_{t-1}}{max} P[q_1q_2\ldots q_t, \ O_1O_2\ldots O_t | \lambda]
+                \]
+                That is, $\delta_{t}(i)$ is the highest probability along a single path, at time $t$, which accounts for the first $t$ observations and ends in state $S_{i}$. By induction, we have
+                \[
+                \delta_{t+1}(j) = [\underset{i}{max}\delta_{t}(i)a_{ij}] \cdot b_{j}(O_{t+1})
+                \]
+                The complete algorithm procedure can be found in~\cite{rabiner1989HMMTutorial}.
+\item Model Training. That is, how do we adjust the model parameters $\lambda = (A,B,\pi)$ to maximize $P(O|\lambda)$. Normally, training sequence is needed to train the HMM model. Typically, \emph{Baum-Welch} method, gradient techniques, or other EM(expectation-modification) methods are used to iterative update and improve the HMM parameters. A set of reasonable reestimation formulas for $\pi$, $A$, $B$ are:
+
+
+        \[
+        \overline{\pi_{i}} = expected \ frequency \ in \ state \ S_{i} \ at \ time (t=1).
+        \]
+
+        \[
+        \overline{a_{ij}} = \frac{expected \ number \ of \ transitions \ from \ state \ S_{i} \ to \ state \ S_{j}}{expected \ number \ of \ transitions \ from \ state \ S_{i}}
+        \]
+
+
+        \[
+        \overline{b_{j}}(k) = \frac{expected \ number \ of \ times \ in \ state \ j \ and \ observing \ symbol \ v_{k}}{expected \ number \ of \ times \ in \ state \ j}
+        \]
+        For each iteration,  the current model $\lambda = (A,B,\pi)$ will be updated by above reestimated parameters so that $P(O|\overline{\lambda}) > P(O|\lambda)$
+        The details about this approach can be found in~\cite{rabiner1989HMMTutorial}.
+\end{itemize}
+
+We will then use an T2D daily behaviors as an example to concrete the HMM idea. As mentioned before, there are many factors or covariant that could affect patients' blood glucose levels. For example, medicine, diet, exercise, mood, mental status,etc. These factors can be easily observed. Meanwhile, their blood glucose level can only be measured by glucometer which requires blood sample. Such process is very inconvenient and relatively expensive. Moreover, the $A1C$ is normally taken every couple of months. Thus, we can consider the status of patients' blood glucose level as the hidden variables. Our goal would be generate daily action plan for based the previous observation sequences or predict their blood glucose level based on observations. As such, patients' would be able to know which kind of actions they take would control their blood glucose level. For each individual $i$, we can simply define the blood glucose level as High, Medium, and Low ($N = 3$ hidden states) based on heuristics. Then we can analyze the characteristics of observed daily life-style sequence and design different HMM models $\lambda_1$, $\lambda_2$, $\ldots$,  $\lambda_L$ as candidates. These models will be trained by the training observations. Once all modes are built and refined, we can use the test or k-fold cross-validation to evaluate the best $P_{i}^j(O|\lambda)$, $1 \ge j \ge L$ for each model. Finally, the optimized HMM model will be used to predict patients' blood glucose level and provide personalized action plan.
+
+
+There are numerous research issues in HMM. Besides the basic discrete HMM we mentioned above, there are many other types of HMM like continuous HMM (observations are continuous value), semi-HMM (the probability of state transition also depend on the time duration of being at the current state), autoregressive HMM (the observation vectors are generated from an autoregressive process), etc.
+Various HMM and their extensions could be studied and applied to T2D self-management based on the characteristics of dataset.
+
+In terms of real-world observation data, it is generally assumed that there exists at least one observation associated with every state. Zheng and Kobayashi~\cite{zhengyu2001MissingDataAndMultipleObservation} argue that observation data may be missing for some intervals (missing value problem) and multiple observation streams that are not necessarily synchronous to each other and may have different ``emission distributions`` for the same state. They proposed a novel and efficient \emph{forward-backward} algorithm for semi-HMM with missing observations and multiple observation sequences.
+
+The standard maximum likelihood optimization mentioned before aims to find ``best`` model parameters that maximize the probability $P(O|\lambda)$. However, Rabiner in his article \cite{rabiner1989HMMTutorial} mentioned that sometimes the real data will not always follow the HMM and the model parameters would be too difficult to estimate. One reason is that the training and testing data have considerably different statistical properties, and the other is the difficulties of obtaining reliable parameter estimates in the training process. Thus, some alternations such as maximum mutual information (\emph{MMI}) criterion and discrimination information (\emph{DI}) have been proposed to solve this issue.
+
+In maximum likelihood, we optimize an HMM of only one class at a time, and do not touch the HMMs for other classes at that time. Thus the maximum learning procedure gives a poor discrimination ability to the HMM system, specially when the estimated parameters (in the training phase) of the HMM system do not match with the test observations. This type of mismatches can arise due to two reasons. One is that the training and testing data have considerably different statistical properties, and the other is the difficulties of obtaining reliable parameter estimates in the training.
+The MMI criterion on the other hand consider HMMs of all the classes simultaneously. Parameters of the correct model are updated to enhance it's contribution to the observations, while parameters of the alternative models are updated to reduce their contributions. This procedure gives a high discriminative ability to the system and thus MMI belongs to the so called ``discriminative training`` category.  Discrimination information (\emph{DI}) assumes the data to be modelled was not necessarily generate by a certain Markov source, but does obey certain constrains (like has a positive definite correlation matrix for the observation and hidden states). It aims to minimize the discrimination information or the cross entropy between the probability distribution of the data we wanted to model (observable) and the probability distribution of HMM (hidden states). In that way, we could find the most similar matches between these two random processes.
+
+As a summary, HMM is a well-established modelling techniques for many application areas, however, it has the markvoian process assumption. That is, the state transition only depends on the current state and irrelevant of time duration.
+Next, we will introduce a more general stochastic called multi-state model, which is broadly used in medical researches and event history analysis.
+\subsection{Multi-State Models}
+Multi-state models are not equivalent to Markov models or hidden markov models, however both share the concept of states. The simplest Markov assumption, as mentioned before, is that future evolution only depends on the state at time $t$; in other words, past of process, or history, is summarized by the state at time $t$. However, multi-state models somewhat assume that other part of the history also affect the future evolution. In T2D self-management, patients' current blood glucose level could also depend on a series of previous status. Thus, we think that multi-state model could also very suitable for mining T2D behaviour data.
+
+A \emph{multi-state process} can be simply described as a stochastic process ($X(t)$, $t\in T$) with finite state space $S= {1,\ldots, p}$ and with right-continuous sample paths: $X(t+) = X(t)$. The initial distribution $\pi_{i}(0) = Prob(X(0) = i)$, $i \in S$. A multi-state process $X(\cdot)$ generates a observation history $O_t$ until time $t$. Based on this observed history, we can define the transition probabilities:
+\[
+ P_{ij}(s,t) = Prob(X(t) = j | X(s) = i, O_{s^{-}}
+\]
+for $i,j \in S$, $s,t \in T$, $s \le t$ and the transition intensities:
+\[
+    \alpha_{ij}(t) = \lim_{\Delta t \rightarrow 0}\frac{P_{ij}(t,\ t + \Delta t)}{\Delta t}
+\]
+A state $i \in S$ is absorbing if for all $t \ in T$, $i \in S$, $i \ne j, \alpha_{ij}(t) = 0$. In medical context, an absorbing state normally refers to a death state.
+Visually, multi-state models can be illustrated using node and link, where nodes representing states and link between states representing the possible transitions.  The state probabilities $\pi_j(t) = Prob(X(t) = j)$
+\[
+\pi_{j}(t) = \sum_{i\in S}{\pi^i(0)P_{ij}(0, \ t)}
+\]
+which means a sum of all transition probabilities from all possible state $i$.  Not like the Markovian process we mentioned in last subsection, the transition probabilities and intensities of multi-state model might not only depend on current state probability, but also the observed history.
+Several typical multi-state models are survey in articles \cite{andersen2002EventHistoryAnalysis}, \cite{christopher2003MultistateMarkovModels}, \cite{daniel1999Epidemiology}. Those models provide very references for modelling T2D daily behavioural data.
+
+\begin{itemize}
+\item Two-state model for survival data. The visual representation for two-state model is shown in Figure~\ref{fig:twostate}. It has only two states, Alive and Death (absorbing state). A random variable $T$ representing the time from a origin (time 0) to the occurrence of the event ``death``. The distribution $T$ is characterized by probability distribution function $F(t) = Prob(T \le t)$. Equivalently, the survival distribution function $S(t) = 1 - F(t)$.  In continuous time, the distribution $S(t)$ also be characterized by the \emph{hazard rate function}
+    \[
+        \alpha(t) = -\frac{d\log(S(t)}{dt}  = \lim_{\Delta t \rightarrow 0}\frac{Prob(T \le t + \Delta t | T \ge t)}{\Delta t}
+    \]
+
+    \[
+        S(t) = \exp\biggr(-\int_{0}^{t} \alpha(u)du \biggr)
+    \]
+    where $\alpha(\cdot)$ is the transition intensity from state 0 to state 1.  Such process is Markovian since it has only one transition from 0 to 1. Observed covariates can be added to the model using a regression model for the transition intensity.
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{twostate.png}
+\caption{Two-state model for survival data.}
+\label{fig:twostate}
+\end{center}
+\end{figure}
+
+\item The competing risks model. This model normally has one initial state and multiple absorbing states. We illustrate two states in Figure~\ref{fig:competingrisk}. The transition intensities $\alpha_{0j}$ for $j = 1, \ldots, k$ are given by the casue-specific hazard functions:
+    \[
+         \alpha_{j}(t) = \lim_{\Delta t \rightarrow 0}\frac{Prob(Dead \ from \ casue \ j \ by \ t + \Delta t | T \ge t)}{\Delta t}
+    \]
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{competingrisk.png}
+\caption{The competing risks model for two causes}
+\label{fig:competingrisk}
+\end{center}
+\end{figure}
+   where $T$ is the survival time. The transition probabilities are given by the survival function
+   \[
+            P_{00}(0,t) = S(t) = Prob(T>t) = \exp\biggr(-\int_{0}^t \sum_{j=1}^k \alpha_j(u)du \biggr)
+   \]
+   and cumulative incidence functions
+   \[
+            P_{oj}(0,t) = \int_{0}^{t}S(u-)\alpha_{j}(u)du, \quad j = 1, \ldots, k
+   \]
+   Like the simple two-state model, the completing risks model is also Markovian and covariates may be included into the model via regression models for the cause-specific hazards.
+\item The illness-death model. This model is illustrated in Figure~\ref{fig:illnessdeathmodel1}. One important feature of this model is the mortality $\alpha_{12}(t)$ of the disease may sometimes depend on duration $d$ since entry to state 1, in addition to the dependence of `age` $t$. Note that if $\alpha_{12}(t)$ does not depend on $d$, the process is Markovian, otherwise it is a $semi-Markov$ process.
+
+    In Figure~\ref{fig:illnessdeathmodel1}, the possibility of reversibility is possible. Another case is irreversibility, which is illustrated in Figure~\ref{illnessdeathmodel2}. The transition probabilities in this model have simple explicit expressions:
+    \[
+        P_{00}(s,t) = \exp\biggr(-\int_{s}^{t}(\alpha_{02}(u) + \alpha_{01}(u))du \biggr)
+    \]
+    and (in the Markovian case)
+    \[
+        P_{01}(s,t) = \biggr(-\int_{s}^{t}P_{00}(s, u-)\alpha_{01}P_11(u,t)du \biggr)
+    \]
+    where
+    \[
+    P_{11} = \exp\biggr(-\int_{s}^{t}\alpha_{12}(u)du \biggr)
+    \]
+    is the cumulative incidence functions. $\alpha_{12}(\cdot)$ may depend on both age and duration (semi-Markovian). So it can be further defined as:
+    \[
+    \alpha_{12}(t,d) = \lim_{\Delta t \rightarrow 0}\frac{Prob(X(x + \Delta t) = 2 | X(t) = 1, 0 \rightarrow 1 \ transition \ at \ t - d)}{\Delta t}
+    \]
+    \item
+    This model can be further explored to model T2D blood glucose data. Since the low glucose state normally depend on the duration of high glucose state.
+    \begin{figure}
+    \begin{center}
+    \includegraphics[width=0.4\textwidth]{illnessdeathmodel1.png}
+    \caption{The illness-death model, irreversibility.}
+    \label{fig:illnessdeathmodel1}
+    \end{center}
+    \end{figure}
+
+    \begin{figure}
+    \begin{center}
+    \includegraphics[width=0.4\textwidth]{illnessdeathmodel2.png}
+    \caption{The illness-death model, irreversibility.}
+    \label{fig:illnessdeathmodel2}
+    \end{center}
+    \end{figure}
+\item Repeated events model. If interest focuses on repeated occurrences of a given event, such model is shown in Figure~\ref{repeatedmode}
+     \begin{figure}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{repeatedmode.png}
+     \caption{A model for repeated events.}
+     \label{fig:repeatedmode}
+     \end{center}
+     \end{figure}
+\item Bone marrow transplantation model. A model combining most of the above features has been studied in detail as describing some of the possible states of a leukaemia patient following bone marrow transplantation (Figure~\ref{fig:bones}). More specifically, patients have been given various kinds of therapy to temporarily keep the disease down; they are said to be \emph{remission}.  In the context of bone marrow transplantation, two different types of complications are considered: acute graft-versus-host disease ($A$), chronic graft-versus-host disease ($C$), and a special state $AC$ is defined for those patients acquiring both $A$ and $C$.  If all transition rates depend only on time $t$ since transplantation, it is a Markov process, but various kinds of duration dependence (semi-Markov process models) may also be relevant.
+      \begin{figure}
+      \begin{center}
+      \includegraphics[width=0.4\textwidth]{bones.png}
+      \caption{Bone marrow transplantation model.}
+      \label{fig:bones}
+      \end{center}
+      \end{figure}
+\end{itemize}
+
+After the multi-state modeling, the most important research question afterwards is the inference parameters (transition intensities and transition probabilities) from data. We need to gain insight into the dynamics of the processes by quantifying transition intensities and perhaps assessing their dependence on covariates. A final purpose of multi-state modelling may by \emph{prediction}, could be either a illustration of patterns of some other practical purposes. More details about inference parameters can be found in research articles~\cite{andersen2002EventHistoryAnalysis},\cite{christopher2003MultistateMarkovModels},\cite{daniel1999Epidemiology}.
+
+In the next subsection, we will discuss the very popular regression analysis as a potential tools for T2D action mining.
+\subsection{Regression Analysis}
+\subsubsection{Linear Regression}
+Linear Regression is the most popular and powerful tool in data mining to deal with the numeric prediction problem. It aims to express the class as a linear combination of the attributes, with determined coefficients:
+\begin{equation}
+ \beta_{0} +  \beta_{1}x_{1} +  \beta_{2}x_{2} +  \beta_{3}x_{3} + \ldots +  \beta_{k}x_{k} = y
+\end{equation}
+where $y$ is the class; $x_1, x_2, \dots , x_k$ are the attribute values; and $w_0, w_1, \ldots , w_k$ are coefficients. They are calculated from the training data. Suppose the first instance will have a class (numeric), say $y^1$, and attribute values $x_1^1, x_2^1, \dots , x_k^1$, where the superscript denotes that it is the first example. The predicted value for the first instance’s class can be written as:
+\begin{equation}
+\beta_{0}x_{0}^1 +  \beta_{1}x_{1}^1 +  \beta_{2}x_{2}^1 + \ldots +  \beta_{k}x_{k}^1 = \sum_{j = 0}^{k} \beta_{j}x_{j}^1
+\end{equation}
+This is the predicted, not the actual, value for the first instance’s class. What we concern is the difference between the predicted and the actual values. The method of
+linear regression is to choose the coefficients $w_j$—there are k + 1 of them—to minimize the sum of the squares of these differences over all the training instances. Suppose there are $n$ training instances; denote the $i_{th}$ one with a superscript $i$. Then the sum of the squares of the differences~\cite{statisticallearningVapnik1995} is:
+\begin{equation}
+ \sum_{i= 0}^{n} (y^i - \beta_{j}x_{j}^i)^2
+\end{equation}
+
+\subsubsection{Model Regularization}
+In model selection, overfitting and underfitting are two typical issues needed to be considered. Overfitting generally occurs when a model is excessively complex, such as having too many parameters relative to the number of observations. A model which has been overfit will generally have poor predictive performance, as it can exaggerate minor fluctuations in the data. However, if a model is too simple (general), the prediction error would also be very large. Also, interpretation of the model is also very important for practical applications. Ordinary users or scientists prefer a simpler model because it puts more focus on the relationship between the response and covariates. Parsimony is especially an important issue when the number of predictors is large. It is well known that least squares often does poorly in both prediction and interpretation. Penalization techniques have been proposed to improve least squares.
+\begin{itemize}
+\item Ridge regression~\cite{Hoerl1970Ridge} minimizes the residual sum of squares subject to a bound on the $L2$-penalty form of the coefficients. As a continuous shrinkage method, ridge regression achieves its better prediction performance through a bias–variance trade-off. However, ridge regression cannot produce a parsimonious model, for it always keeps all the predictors in the model.
+
+\item A promising technique called the Lasso was proposed by Tibshirani~\cite{tibshirani1996Lasso}. Lasso is a penalized least squares method imposing an $L1$-penalty on the regression coefficients. Owing to the nature of the $L1$-penalty, the lasso does both continuous shrinkage and automatic variable selection simultaneously.
+
+\item Elastic net~\cite{zou2005ElastNet} is a compromise between the ridge-regression penalty and the lasso penalty. This penalty is particularly useful in the situation that, or any situation where there are many correlated variables.
+\end{itemize}
+In summary, ridge, lasso, and elastic net add various penalty term to the ordinary least square, now we minimize:
+\[
+    \sum_{i = 1}^n (y_i - x_i^T b)^2 + \lambda P_{\alpha}(b_1, b_2, \ldots, b_{p})
+\]
+\[
+    P_{\alpha} = \sum_{j = 1}^{P}\biggr[\frac{1}{2}(1 - \alpha)b_{j}^2 + \alpha |b_{j}| \biggr]
+\]
+where
+\begin{itemize}
+\item $\alpha = 0$: ridge regression
+\item $\alpha = 1$: Lasso regression
+\item $ 0 \le \alpha \le 1 $: Elastic net
+\end{itemize}
+The optimized $\lambda$ is normally calculated via cross-validation on specific dataset.
+
+Linear regression is an excellent, simple method for numeric prediction, and it has been widely used in data mining and its application. However, linear models suffer from the disadvantage of linearity. If the data exhibits a nonlinear dependency, such line may not fit very well. Thus, more advanced approaches such as introducing kernel functions to map the low-dimensional data to high-dimensional space in order to archive linear dependency.
+
+\subsubsection{Locally Weighted Regression}
+To mining T2D actions and behaviors,  we may also want the model to be both memory-based and able to focus on the latest patient's data or similar patients' data from other patients. Memory-based methods are non-parametric approaches that explicitly retain the training data, and use it each time a prediction needs to be made.  It avoids interference between old and new data by using all the data to predict the result, which allows it achieve real-time learning.
+
+Locally weighted regression (LWR) is a memory-based method that performs a regression around a point of interest using only training data that are "local" to that point~\cite{localfittingCleveland1988}, \cite{localregressionCleveland1988}.
+Thus, locally weighted regression (LWR) can be a very promising solution.  LWR weights the training instances according to their distance to the test instance and performs a linear regression on the weighted data. Training instances close to the test instance receive a high weight; those far away receive a low one.  There are many distance-based weight assignment approaches such as Euclidean distance, Gaussian Kernel, etc. Figure~\ref{fig:locally} shows a locally weighted regression using kernel. One research shows that LWR was suitable for real-time control by construing an LWR-based system that learned a difficult robot juggling task~\cite{robotShaal1994}.
+\begin{figure}[t*]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{locally.png}
+\caption{Instances are weighted by proximity or distances to the certain instance in question using a kernel.  A regression is then computed using the weighted instances.}
+\label{fig:locally}
+\end{center}
+\end{figure}
+The main advantages is that it is ideally suited for incremental learning: all training is done at prediction time, so new instances can be added to the training data at any time. However, like other instance-based methods, it is slow at deriving a prediction for a test instance. First, the training instances must be scanned to compute their weights; then, a weighted linear regression is performed on these instances. Also, like other instance-based methods, locally weighted regression provides little information about the global structure of the training dataset~\cite{Wekawitten2005}. Thus, we believe that we can try employing and optimize the locally weighted regression to analyze and patients' data.
+\subsubsection{Logistical Regression}
+Besides the numeric prediction, regression analysis is also useful for classification problem. Logistic regression is a very popular and efficient regression for classification tool, to classify food item based on nutrition information. Instead of approximating the $0$ and $1$ values directly, logistic regression builds a linear model based on a transformed target variable \cite{Wekawitten2005}.
+Suppose first that there are only two classes (0 and 1). Logistic regression replaces the original target variable with
+\[
+P_L^1 = \frac{1}{1 + exp(-W_0 - W_1X_1 \ldots W_KX_K)}
+\]
+$P_L^1$ means the probability to be the class 1 while $P_L^0 = 1 - P_L^1$ means the probability to be class 0. $X_i, i\in 1 to k$ represents each nutrition feature in a food item and $\beta_i$ means its weight. The $-\beta_0 - \beta_1X_1 \ldots \beta_KX_K$ means the target value calculated based on linear regression mentioned early in this subsection. The target value transformation function, which is often called the \emph{logit} transformation or \emph{sigmoid} function. Just as in linear regression, weights or coefficients should be found that fit the training data well. Linear regression measures the goodness of fit using the squared error. In logistic regression the \emph{log-likelihood} of the model is used~\cite{Wekawitten2005} instead. Suppose we have $n$ training food items with class $Y^i$, the \emph{log-likelihood} is given by
+\[
+\sum_{i = 1}^{n} (1 - Y^i)log(1 - P_L^1) + Y^i * log(P_L^1)
+\]
+where the $Y^i$ are the class or label of each training food item and can be either zero or one. The weights $w_0, W_1, W_2, \ldots, W_k$ need to be chosen to maximize the log-likelihood.
+
+In conclusions, regression analysis could dig out which features or covariates have the most significant effects on the dependent variable (e.g., blood glucose level). Certain cost could also be assigned to on each feature to adjust such influence. One important feature of regression analysis is the interpolation of the model,  even any end users without relevant data mining knowledges can comprehend the model in a very convenient way.  Next, we will another potential models for mining patients' data.
+\subsection{Decision Tree}
+\subsubsection{C4.5}
+\emph{Decision Tree Classifier} has a structure that is either
+\begin{itemize}
+\item \emph{a leaf}, indicating a class, or
+\item \emph{a decision node} or \emph{non-leaf node} that specifies some test to be carried out on a single attribute value, with one branch and subtree for each possible outcome of the test \cite{C45_Ross_1993}.
+\end{itemize}
+Similar to regression model, the main advantage of decision tree classification is that it is a white box model and could be very convenient to understand and interpret the generated model. Also, the process of training and analyzing of decision tree is very fast.
+There are many decision tree learning algorithms for classification tasks such as \emph{C4.5}, \emph{CHi-squared Automatic Interaction Detector (CHAID)}, \emph{ID3}, \emph{CRT}, etc. Here, we will focus on $ID3$ and $C4.5$ to generally show the idea of decision tree.
+
+The skeleton of construing decision tree model from a set of training instances is the divide and conquer. That is, the decision tree algorithms try to recursively select an attribute to split the training instances of current root node into subtrees until each subtrees in the partition contains cases of a single class, or until no split offers any improvement. The original \emph{ID3} used a split criterion called \emph{information entropy}, as defined as below:
+
+\begin{equation}
+info(T) = - \sum_{j = 1}^{k} \frac{|T_{i}|}{|T|} \times \log_{2} \Big( \frac{|T_{i}|}{|T|} \Big)
+\end{equation}
+
+where $info(T)$ measures the average amount of information needed to identify the class of a case in $T$.
+
+Now consider a similar measurement after $T$ has been partitioned in accordance with the $n$ outcomes of a test $X$. The expected information requirement can be found as the weighted sum over the subsets, as
+\begin{equation}
+info_{X}(T) = \sum_{i=1}^{n} \frac{|T_{i}|}{|T|} \times info(T_{i})
+\end{equation}
+
+The quantity
+\begin{equation}
+gain(X) = info(T) - info_{X}(T)
+\end{equation}
+measures the information that is gained by partitioning $T$ in accordance with the test $X$.
+
+Although the \emph{information gain} approach typically can provide good results, it still has strong bias in favor of tests with many outcomes (such as, patientID). The extreme case is that each outcome of an attribute only contains one instance, which makes its \emph{information gain} very large. Such bias can be rectified by normalization in which the gain of the attribute with large outcomes is adjusted.
+\begin{equation}
+split  info(X) = - \sum_{i = 1}^{n} \frac{|T_{i}|}{|T|} \times \log_{2} \Big( \frac{|T_{i}|}{|T|} \Big)
+\end{equation}
+As a result, the \emph{C4.5} selects the attribute which has the maximum \emph{gain ratio} to split the tree.
+\begin{equation}
+gain  ratio(X) = gain(X)/splitinfo(X)
+\end{equation}
+
+In terms of continues attributes, \emph{C4.5} algorithm uses binary split and tries to find the split threshold which has the maximum \emph{gain ratio}.
+
+In real data-mining tasks, missing values in instances always exist. However, it is not very wise to just discard such instances as it weakens the ability to find patterns. The \emph{C4.5} algorithm introduces the fraction \emph{F} on the \emph{information gain} and assigns weight on each instances based on the distribution or the probability of each attribute to be known of unknown.
+To classify an unseen instance with missing value, the \emph{C4.5} explores all possible outcomes and combines the resulting classifications arithmetically. Since there can be multiple paths from the root to the leaves, a "classification" is a class distribution.
+
+Normally, the result of a decision tree is very complex that ''overfits the data'' by inferring more structure than is justified by the training instances. Thus, it is usually necessary to "prune" the tree, that is, remove parts of the tree that do not contribute classification accuracy on unseen cases, producing something less complex and more comprehensible.
+The tree pruning approach taken in \emph{C4.5} uses only the training set to predicting error rate. If replacement of certain subtree with a leaf, or with its most frequently used branch, would lead to a lower predicted error rate, then prune the tree accordingly.
+In addition, another tree pruning approach called \emph{Reduced-error pruning}~\cite{Wekawitten2005} which assesses the error rates of the tree and its components directly on the test dataset.
+
+\subsubsection{Mining Actionable Knowledge Using Decision Trees}
+In addition to pruned decision tree,  researchers  can also mine actionable knowledge using such tools. Ling et al.~\cite{miningoptimal2002Charles} first proposed a novel algorithms to suggest actions to changes customers from an undesired status(such as attritors) to a desired one(such as loyal). The basic ideas of the algorithm can be illustrated using an example in Figure~\ref{fig:decisiontree}.
+\begin{figure}[t*]
+\begin{center}
+\includegraphics[width=0.65\textwidth]{decisiontree.png}
+\caption{An example of decision classification for customers profile.}
+\label{fig:decisiontree}
+\end{center}
+\end{figure}
+
+Suppose we have built a qualified decision tree on a customers dataset which has three features, namely 1)services (L, M, and H), 2)Sex(F and M), 3)Mortgage Rate (L and H).  Each node has the probability to be loyalty. Now, given a customer Jack (Service = low, Sex = M, and Rage = L), his probability being loyal is 20\% predicted by the tree model.  This algorithm will search the each leaf node to move Jack to the optimal node with maximal profit.  For example, we could move Jack to leaf A by changing its gender (M to F), the probability gain of this action is 70\% but the cost would be extremely high which make the profit to be negative. Instead, we could change Jack to leaf E by changing his attributes (Rate from L to H and Service from L to H). The profit gain is calculated by calculating the difference between \emph{Expected gross profit}  and  \emph{Total cost}. The expected gross profit and cost matrix of changing customers' attribute is defined by domain expert. As a result, by searching each leaf node, the optimal action could be discovered by each customer and gain the expected maximal profit for a company.
+
+Qiang et al. \cite{extractingQiang}, \cite{postprocessingDecisionTree2003Qiangyang} extended and refined the approaches by adding resource constrains. They argue that an enterprise may wish to implement at most $k$ actions  in a particular marketing campaign due to the resource limitation. It is important that which $k$ actions are the best and how to find a subsets of those $k$ actions.
+They proposed two versions of this problem 1)\emph{bounded attribute problem} and 2)\emph{bounded segmentation problem}.
+
+In bounded attribute problem, the enterprise is interested in launching the campaign by alternating no more that $k$ attributes and a customer may receive an action set from these $k$ attributes. An exhaustive search algorithm would take $O(m^{k})$ ($m$ is the total number of attribute) times to search the optimal subset, which makes it a NP-complete problem. By removing the optimality requirement, they used a greedy search algorithm to find the locally optimal subset. Bounded segmentation problem aims to separate all customers into $k$ clusters and each subgroup receives an unique action set from $k$ action sets, where each action set takes the group of customers from source leaf node to a destination leaf node.  The exhaustive search for the optimal value takes $O(n^k)$ times, where $n$ is the number of total action sets. The greed profit search can also be used to find the $k$ action sets so as to maximize the net profit of covered leaf nodes.
+Their empirical study shows that such greedy algorithms efficiently discovered the best $k$ actions and the total profit is very close to the optimal value obtained by the exhaustive search (on a dataset provided by Canadian Imperial Bank of Commerce). Such results offer effective action mining solution to intelligent CRM for enterprises.
+
+Above works assume the availability of the cost for actionability is known, such type of knowledge would be the bottleneck in practice since they are domain experts. In T2D self-management, such cost could be defined by domain knowledge or learned by patients' daily activities patterns. For example, increasing 1000 / day is much easier than decreasing carbohydrates 100 g / day for some patients. We argue that such relationship could be mined from patients' frequent pattern and personalities.
+
+Actionability mining is an important but under-studied topic. It can generate action plans for to maxim the gain or provides real-time personalized recommendation for individual.
+According the best of our knowledge, the researches in the area seem to be very ad-hoc. Related action mining works using HMM, multi-state models, regression, and decision tress surveyed in this section are applied in different problem domains. In our opinion, the usability of other potential models like Bayesian Belief Network, Artificial Neural Networks (ANN), Support Vector Machines (SVM) is still unexplored. We do not survey these models in this article but make it as our future work.
+
+\section{Visual Pattern Recognition}
+Being compliant with generated action plans or prescription is a passive manner. Meanwhile, researches on how to make T2D patients more ``proactive`` in management of their disease would also be very beneficial. As mentioned in Section~\ref{sec:intro}, gamification technologies are able to make the data logging process more interesting and the information visualization could significantly facilitate the data analysis process. We give our designed diet management used in the clinical trail as an example (Figure~\ref{fig:dietmoduel}).  In this design, we first use an classification model (logistic regression) to generate the probabilities of ``eat more often`` / ``eat less often``. Then color coding is used to represent such . As such, patients' would immediately know which food item is healthy or not.  Then, patients' can drag certain food items to a plate on the right.  Such plate has the target nutrition for each patient as presented by the green outline and the colors of the pie charts represents the health score for each component. As shown in Figure~\ref{fig:dietmoduel}, the Oil \& Fat of current meal exceed the target and its unhealthy. Patients can explore which kind of food items cause a bad meal by themselves using this tool.
+\begin{figure}[t*]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{dietmoduel.png}
+\caption{Visualizing meal nutrition information using pie charts and color coding}
+\label{fig:dietmoduel}
+\end{center}
+\end{figure}
+By presenting the knowledge and data to the patients in a very convenient way, patients would also be well educated to collected and analyze their own data thus generate some knowledge about how to management their disease.  However, we argue that since other health features can be automatically measured by varieties of sensors. The diet input and management is the bottleneck of self-management. Ideally, when a meal is taken pictures by the camera of patients' mobile devices, nutrients and elements of this meal are automatically analyzed by images pattern recognition algorithms. Such automatical food record process would greatly enhance the usability and user experience.  In this section, we will discuss the possibilities of utilizing visual pattern recognition to automatically record diet information.
+
+\subsection{Food Image Recognition}
+Food image recognition is a very difficult topic in generic objects recognition due to its large varieties in spatial, shape, color, texture features. Due to its complex characteristics, traditional multi-class classification solutions would cause very large intra-class errors in practical settings.
+
+A general framework for food imagines recognition is presented in Figure~\ref{fig:imagesrecognition}. Typically, a image is represented a high dimensional pixel matrix. For example, a 640 $x$ 480 picture would generate a 307200-dim pixel feature vector. We could then simply applies classification on that feature vector to predict its label. However, such naive strategy could be very computational costly. Thus, raw image files are normally needed to reduce the data dimensionality and extract only subset or transformed to characterize the original images. In traditional image recognition tasks, features are used as the starting point and main primitives for subsequent recognition algorithms, the overall algorithm will greatly depend on the feature extraction.
+After features are extracted and represented (normally in numerical feature vectors or visual words), supervised or unsupervised pattern recognition tools (mostly SVM or ANN) can be used to classify or cluster images.
+\begin{figure}[t*]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{imagesrecognition.png}
+\caption{A general framework for food images recognition}
+\label{fig:imagesrecognition}
+\end{center}
+\end{figure}
+
+As far as we concerned, there are two specific research goals for food image recognition: 1) Identify the hierarchical food category of the meal imagines 2) Segment food ingredients in the meal photos. Savakar~\cite{Savakar2012grainClassification} collected about 8,000 food grain images (1,000 for each) for 8 grain categories classification task. 18 color and 27 textual features are extracted to form the feature vectors. They employed the classic back propagation network for classification task. The number of input node is determined by the dimension of feature vector and the output layer has 8 nodes (8 grain categories). Their evaluation results show that is best performance could reach 92\% for certain classes. In spite of the high precision, we believe that this work is quite limited due to its small scale of empirical evaluation and the number of categories.
+More challengingly, Joutou et al.\cite{taizchi2009foodMKL} build a food image recognition system for 50 food categories  using Multi Kernel Learning (MKL) and features fusion. In general,  they first used Scale Invariant Feature Transform (SIFT) to generate the feature vectors. The main advantage of the SIFT feature descriptor is that the extracted interesting feature points are invariant to image scale and rotation. They are also robust to changes in illumination, noise, and minor changes in viewpoint. More details about SIFT can be found in article~\cite{david1999SITF}. Then, the visual codewords are generated by k-means clustering method based on the distribution of SIFT vectors. As such, an image will be represented by a set of ``visual words``, just like the bag of words in text mining.  In addition to the visual words feature, Joutou et al. also used the color histogram and gabor texture features.
+After the three types of image features are extracted, the classic SVM is adopted by using the MKL to integrate the these image features. Each type of feature will be assigned to one kernel. A weighted linear combination of kernels is used to calculate the maximum-margin hyperplanes. The combined kernel is shows as follows:
+\[
+ K_c(x,y) = \sum_{j=1}^K \beta_j K_j(x,y)
+\]
+
+\[
+with \beta_j \ge 0, \sum_{j=1}^K \beta_j = 1
+\]
+
+MKL can estimate estimate the weights $\beta$for a linear combination of kernels as well as SVM parameters simultaneously in the train step. As such, different types of image features are fused to predict the food category.
+Their empirical evaluation shows that such approach can achieve 61.34\% classification rate for 50 kinds of foods. If the candidate rates are restricted to 3, the classification rate can reach 80.05\%.
+This work has been extended by Hoashi.\cite{hajime2010foodimage} to classify foods for 85 categories. They fused extra Gradient Histogram feature to the MKL model and obtained 62.52\% classification rate for 85-food-categories.
+
+The work proposed by Yang et al. \cite{shulin2010FoodpairwiseFeature} is the only article we surveyed attempting to identify food ingredients. They argue that the key to recognizing food is to exploit the spatial relationships between different ingredients in addition to other traditional image features. Figure~\ref{fig:pairwisefeature} illustrates how they exploit such spatial relationship between ingredients to identify this item as a Double Bacon Burger for Burger King.
+\begin{figure}[t*]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{pairwisefeature.png}
+\caption{Exploiting spatial relationships between ingredients using pairwise feature statistics improves food recognition accuracy.}
+\label{fig:pairwisefeature}
+\end{center}
+\end{figure}
+They first assign a soft label (probability distribution) on each pixel using semantic texton forest. For example, if a pixel in a red patch could have a high likelihood for ``tomato`` and low for ``cheese``. A multi-dimensional histogram feature where each bin corresponds to a pair of ingredient labels and the discretized geometric relationship between two pixels. For instances, the likelihood of observing a pair of ``bread`` and ``tomato`` labels taht are 20 - 30 pixels apart at an angel of 40 - 50 degrees. They treat such histogram as feature vectors and use SVM to classify the food item.  The comparing their approach with the benchmark with color histogram, hist, SIFT, and global ingredients representation and discovered that the classification accuracy is significantly increased on a fast-food dataset by adding such pair-wise spatial features.
+
+
+\subsection{Optical Character Recognition}
+Although the surveyed food images recognition approaches claimed very promising results, the reliably of such approaches in practical settings with thousands food categories is still unexplored. In fact, the cost of food categories classification could be very large in health care. However, on the other side,  such challenges mean many research opportunities in this areas.
+
+In our opinion, the optical character recognition (OCR) could also be utilized to facilitate meal recording. ORC is a well-established area and has been studying for decades. In recent years,  the major OCR technology providers began to tweak OCR systems to better deal with specific types of input. Beyond an application-specific lexicon, better performance can be had by taking into account business rules, standard expression, or rich information contained in color images. This strategy is called "Application-Oriented OCR" or "Customized OCR", and has been applied to OCR of license plates, business cards, invoices, screenshots, ID cards, driver licenses, and automobile manufacturing. As far as our concerns, OCR is not used in food receipt input before. In our daily life, people will keep the food recipes after shopping or go out for dinner.  We could develop an system to detect the food names and servings on the recipes. When having these food keywords, we could query them with our food database and automatically add these food as users' "my food" (could be ingredients or fast food). Next time when users want to input food, they can easily find them from the scanned "my food" list and form a meal.  For example, if users bought a red onion from a superstore, a string like "red onion" will be shown on the receipt and can be photoed by the camera on their smart phones, then can be extracted and added to users' recent purchased food list.  It is very likely that user will eat this "red onion" in a few days and they can easily find that in his/her recent purchased food list. It would be extremly useful when users have a fast food combo (burger/coke/fries/salad, etc). They will all on the same single food receipt and that meal information will be automatically calculated and analyzed right after the receipt is photoed.
+
+However, the food names on the receipt are normally processed for receipt printing.  There is a challenge on how to generate the query terms and retrieve the food items  from food databases to get the relevant nutrient information.  Extended boolean model or fuzzy retrieval could be used to query the relevant food items in the database and the most $k$ food items' nutrient information are averaged.
+ 
+
+\subsection{Image Recognition Using Deep Learning}
+As mentioned in the previous subsection, the most important part for food images or food receipt OCR is the feature extraction and representations. The performance of recognition systems greatly depend on how well the ``good`` features are extracted. People would argue that is there any way that the system can learn the food features by itself?  Such idea is illustrated in Figure
+
+The most famous approach is using deep learning. 
+Deep learning is essentially a neural networks with much deeper hidden layers and node numbers comparing to traditional classical neural networks.
+Huge amount of parameter turning in deep neural network require hardware. 
+
+
+\section{Research Proposal}
+\label{sec:researchproposal}
+Our goal, research plan,
+\subsection{GlucoGuide: Preliminary Experiments and Clinical Trail}
+\subsubsection{System Architecture}
+We will introduce the logical model and architecture of our prototype in this section, which is shown in Figure~\ref{fig:architecture}.
+\begin{figure}[t*]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{architecture.png}
+\caption{Framework of preliminary experiments}
+\label{fig:architecture}
+\end{center}
+\end{figure}
+
+It contains three main components, including the 1) Bluetooth-enabled medical devices, 2) GlucoGuide smart phone application, and 3) GlucoCenter (Web Portal). Their development process involves many most up-to-date and advanced technologies. The medical devices used for recording patient's everyday glucose level, step counts, and blood pressure are all Bluetooth-enabled, which communicates with smart phone application and facilitate the daily recording process. The smart phone application is currently designed and built on the latest Google Android system, aiming to provide excellent user experience via our well-designed user interface. All patients' data will be securely uploaded to the GlucoCenter, which owns a centralized database and server running different data analysis and data mining technologies (for example, regression analysis, food classification and recommendations). Patients and physicians can also log in GlucoCenter using their smart phone or PC to review all health data ubiquitously.
+
+\subsubsection{Applied Algorithms}
+Based on the characteristics of our data and tasks
+
+\subsubsection{Preliminary Clinical Trial and Results}
+The program uses two different methods of recording data: a paper journal or a smart phone application, GlucoGuide, that allows for more immediate feedback. All participants receive one-on-one tailored exercise prescription and healthy eating consultation. The 12 week study includes four visits with the kinesiologist. Final fitness and blood glucose levels will be compared between the two groups of participants.
+
+The 11 participants currently involved in the SMART study include 5 females and 6 males. Seven are prediabetic and four have been diagnosed with type 2 diabetes within the last two years. Seven participants chose to use the phone. Baseline characteristics include an average age was 61.5 years, with a range from 52 to 70 years. The average weight was 100.3 kg for males and 90.2 kg for females, with an average BMI for the group of 33.0. The average waist circumference was 110.5 cm for males and 109.8 cm for females. Blood pressure averaged 125.5 mmHg diastolic and 82.7 mmHg systolic. Average estimated VO2max (VO2max reflects the physical fitness of the individual) was 30.5 ml/min/kg.
+
+
+During this clinical trail, we have been receiving both positive and negative feedback about our system. Most of these are very valuable and informative and able to help us improving the usability and performance of our system.
+
+After about six months user tests and evaluation, we have received a lot of feedback related to the usability of GlucoGuide. In general, participants like the current UI design and the way they record data and interact with their health provider. Most participants found they were much more comfortable and faster at using the technology as the test progressed. However, participant also mentioned that technology can be frustrating, which could cased by both software bugs, network connection or some device hardware problems. Participants sometimes worry that it was their fault that the data was not uploading.
+
+Although we have spent a lot of effort to improve diet recording, it still brings burden to users' self-management. At this point, there is not a very satisfying solution ; our design goal is to make this process as convenient as possible. For example, our current food database can be expanded to avoid frequent customizing food item operations. TheAlso, we can implement food hierarchy searching and browsing. We plan to prepare different user interfaces and conduct user study to measure the number of operations needed to input diet information.
+
+
+
+\subsection{Research Objectives and Methods}
+Dia
+
+\section{Conclusions}
+
+
+\bibliographystyle{abbrv}
+\bibliography{research}
+
+\newpage
+\section{Appendix}
+
+\subsection{Summary of Relevant Technologies in the Market}
+\label{sec:relatedtechs}
+\begin{longtable}{|p{0.2\columnwidth}|p{0.125\columnwidth}|p{0.25\columnwidth}|p{0.25\columnwidth}|p{0.15\columnwidth}|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Name & Description & Pros & Cons & Website \\
+  \hline
+   \emph{Telcare}  & Mobile App and Wireless cellular-enabled glucose meter & Automatic feedback (needs to be pre-written by care provider), Ability for care provider to send personalized feedback, Adjustable glucose targets, Webportal. Printable reports, Supplies re-odering through meter, Sends BG automatically to webportal, Allow patients without glucometer to manually enter data, tracks medicines, nutrition, activities and notes & For iOS only, No research publised,  very costly, cost for glucometer and test strips \$100 for kit, \$36 for 50 test strips for the first year  & \url{http://telcare.com/how-it-works} \\
+  \hline
+    \emph{Verioiq} & Cellular-enabled glucose meter & Notices trends and reports to patient, adjustable glucose targets, rechargeable and longer battery life, large memory  & Paper booklet ``pattern guide``, Meter is \$44.99 plus \$79.99 for 100 test strips, only average for past weeks and 90 days (no graphs or customized patterns), no webportal or communication with healthcare providers & \url{http://www.onetouch.ca/verioiqmeter} \\
+  \hline
+    \emph{WellDoc} & Mobile phone monitoring & Automatic feedback, Educational and coaching & Not available for patients, rather "enterprise customers", manual entry behavioural messaging in response to BG/medications/lifestyle behaviours, Clinical trails revealed decreased HbA1c, Has Webportal & \url{http://www.welldoc.com} \\
+  \hline
+  \emph{iHealth} & Blood pressure dock with iHealth app, or BP wrist cuff & Customized graphs, email option, Bluetooth communication, does not require much memory measure pulse wave, database of FAQs & iOS only, required extra glucometer, no feedback option & \url{http://www.ihealth99.com} \\
+  \hline
+  \emph{Florence} & SMS for patient: tracks Blood $O_{2}, BP$, Temp, Pulse, smoking & Very simple product - uses SMS Automatic feedback (provide advice), Webportal, healthcare providers can send messages to patient, reminders can be programmed tracks trends and breaches - alerts physicians. Data can be exported to excel using Webportal & UK product, plain, not diabetes specific, sends back multiple texts, not intuitive & \url{http://www.getflorence.co.uk} \\
+  \hline
+  \emph{Bant App} & Mobile phone app with Bluetooth communication to glucometer  & Cutomize alerts and appearance, Wireless interface with BP and glucometer, Graph / Analyze 1,2,3 week or 3 months  trends Microblogging feature (parents/peers/providers) Clinical trail - year long BP monitoring lowered than 10mmHg. New trail with adolescents - more frequent monitoring available in 10 languages, free & Info stored in HealthVault, iTunes app not automated BG monitoring, no feedback  & \url{http://bantapp.com} \\
+  \hline
+  \emph{iBGStar} & Glucometer that attaches to iPhone & Automatically syncs data when connected and launches app, tracks BG, carb intaken, insulin dose, Print or Email care provider, Access to support & Not available in North America, iOS only & \url{http://www.bgstar.com/web/ibgstar} \\
+  \hline
+    \emph{MyGlucoHealth} & Bluetooth transmission of glucose readings to phone and Web  & Webportal, reminders for medications, alerts, patient controls thresholds and information sharing, resources available & Need specific test strips, no feedback & \url{http://www.myglucohealth.net} \\
+  \hline
+  \emph{Glooko} & Simple Program to track glucose using adaptor cable linked to phone & Convenient variety of glucose meters, simple,  \$39.95 for cable & iOS only, needs cable, no graphs, no feedback & N/A \\
+  \hline
+  \emph{D Sharp} & Logging App & Canadian developers, Graphs / charts / tables, reminders, made available to all types of diabetes, cross-device usability & No feedback, Expensive \$ 6.99 / month, A1c estimator questionable & \url{http://dsharpdiabetes.com} \\
+  \hline
+  \emph{My Care Team} & Health care team linked BG logger & Uploaded BG, input exercise, meals into computer, add notes, get reminders, review data, reports, connect with care team, modifiable settings, multiple glucose meters & Need computer, must manually connect to upload data, no automatic feedback & \url{http://www.mycareteam.com/default.aspx} \\
+  \hline
+  \emph{Zestar} & Individual diet coach & Algorithm comes up with recommendations based on height, weight, age, last meal, exercise level, desired weight, restaurant info available too & iOS only. Not Diabetes specific & \url{http://www.zestarapp.com} \\
+  \hline
+  \emph{Basis} & Basis-wristband with accelerometer, sleep, perspiration, skin temp& Wristband and smartphone work together to gather health information, sends back real-time feedback & Not diabetes specific & \url{http://www.mybasis.com} \\
+  \hline
+  \emph{MobileCareMonitor} & Wristwatch device offers continuous realtime monitoring for seniors, chronic diseases (gait, falls, panic button, links to Bluetooth medical devices) & System integrates with glucose meter, pulse ox, weight scale, HR sensor, BP cuff through BT, allows care providers to check on ppt & Separate from smartphone - wristwatch and online website & \url{http://www.aframedigital.com} \\
+  \hline
+  \emph{Lark} & Smartphone app with wristband, very similar to Basis, looks into sleep patterns, activity, sends tips & Sends feedback, small lifestyle tweaks & Not diabetes specific & \url{http://lark.com/products/larklife/experience} \\
+  \hline
+\end{longtable}
+
+\subsection{Health Features Recorded in our Preliminary Clinical Trail}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l}
+\hline
+Feature Name & Measurement Methods & Unit & Meta Data \\
+\hline
+Blood Glucose Level & Bluetooth / Manually & mmol/L & Fasting /After-meal \\
+Pulse & Bluetooth / Manually & beats/minute & N/A \\
+Systolic & Bluetooth / Manually & mmHg & N/A \\
+Diastolic & Bluetooth / Manually & mmHg & N/A \\
+Step Count & Bluetooth  & steps/hour & Regular / Aerobic \\
+Carbohydrates Intaken & Manually  & gram/meal & N/A \\
+Fat Intaken & Manually  & gram/meal & N/A \\
+Proteins Intaken & Manually  & gram/meal & N/A \\
+Calories Intaken & Manually  & kcal/meal & N/A \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

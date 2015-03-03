@@ -1,0 +1,315 @@
+\begin{thebibliography}{10}
+
+\bibitem{AbbasnejadRR12}
+M.~E. Abbasnejad, D.~Ramachandram, and M.~Rajeswari.
+\newblock A survey of the state of the art in learning the kernels.
+\newblock {\em Knowl. Inf. Syst.}, 31(2):193--221, 2012.
+
+\bibitem{arthur2007k}
+D.~Arthur and S.~Vassilvitskii.
+\newblock k-means++: The advantages of careful seeding.
+\newblock In {\em Proceedings of the eighteenth annual ACM-SIAM symposium on
+  Discrete algorithms}, pages 1027--1035. Society for Industrial and Applied
+  Mathematics, 2007.
+
+\bibitem{Bengio13}
+Y.~Bengio, A.~C. Courville, and P.~Vincent.
+\newblock Representation learning: A review and new perspectives.
+\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, 35(8):1798--1828,
+  2013.
+
+\bibitem{bengio2007scaling}
+Y.~Bengio and Y.~LeCun.
+\newblock Scaling learning algorithms towards ai.
+\newblock {\em Large-Scale Kernel Machines}, 34, 2007.
+
+\bibitem{BengioICML09}
+Y.~Bengio, J.~Louradour, R.~Collobert, and J.~Weston.
+\newblock Curriculum learning.
+\newblock In {\em ICML}, page~6, 2009.
+
+\bibitem{BergstraBBK11}
+J.~Bergstra, R.~Bardenet, Y.~Bengio, and B.~K{\'e}gl.
+\newblock Algorithms for hyper-parameter optimization.
+\newblock In {\em NIPS}, pages 2546--2554, 2011.
+
+\bibitem{BergstraB12}
+J.~Bergstra and Y.~Bengio.
+\newblock Random search for hyper-parameter optimization.
+\newblock {\em Journal of Machine Learning Research}, 13:281--305, 2012.
+
+\bibitem{Berkes:2005}
+P.~Berkes.
+\newblock Handwritten digit recognition with nonlinear fisher discriminant
+  analysis.
+\newblock In {\em Proceedings of the 15th international conference on
+  Artificial neural networks: formal models and their applications - Volume
+  Part II}, ICANN'05, pages 285--287, Berlin, Heidelberg, 2005.
+  Springer-Verlag.
+
+\bibitem{buades2005non}
+A.~Buades, B.~Coll, and J.-M. Morel.
+\newblock A non-local algorithm for image denoising.
+\newblock In {\em Computer Vision and Pattern Recognition, 2005. CVPR 2005.
+  IEEE Computer Society Conference on}, volume~2, pages 60--65. IEEE, 2005.
+
+\bibitem{SVM99}
+O.~Chapelle, P.~Haffner, and V.~Vapnik.
+\newblock Support vector machines for histogram-based image classification.
+\newblock {\em IEEE Transactions on Neural Networks}, 10(5):1055--1064, 1999.
+
+\bibitem{cho2011}
+K.~Cho, T.~Raiko, and A.~T. Ihler.
+\newblock Enhanced gradient and adaptive learning rate for training restricted
+  boltzmann machines.
+\newblock In {\em Proceedings of the 28th International Conference on Machine
+  Learning (ICML-11)}, pages 105--112, 2011.
+
+\bibitem{cirecsan2010deep}
+D.~C. Cire{\c{s}}an, U.~Meier, L.~M. Gambardella, and J.~Schmidhuber.
+\newblock Deep, big, simple neural nets for handwritten digit recognition.
+\newblock {\em Neural computation}, 22(12):3207--3220, 2010.
+
+\bibitem{CiresanIJCAI11}
+D.~C. Ciresan, U.~Meier, J.~Masci, L.~M. Gambardella, and J.~Schmidhuber.
+\newblock Flexible, high performance convolutional neural networks for image
+  classification.
+\newblock In {\em IJCAI}, pages 1237--1242, 2011.
+
+\bibitem{CoatesNL11}
+A.~Coates, A.~Y. Ng, and H.~Lee.
+\newblock An analysis of single-layer networks in unsupervised feature
+  learning.
+\newblock {\em Journal of Machine Learning Research - Proceedings Track},
+  15:215--223, 2011.
+
+\bibitem{csurka2004visual}
+G.~Csurka, C.~Dance, L.~Fan, J.~Willamowski, and C.~Bray.
+\newblock Visual categorization with bags of keypoints.
+\newblock In {\em Workshop on statistical learning in computer vision, ECCV},
+  volume~1, page~22, 2004.
+
+\bibitem{davies1979cluster}
+D.~L. Davies and D.~W. Bouldin.
+\newblock A cluster separation measure.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, (2):224--227, 1979.
+
+\bibitem{desikan2006automated}
+R.~S. Desikan, F.~S{\'e}gonne, B.~Fischl, B.~T. Quinn, B.~C. Dickerson,
+  D.~Blacker, R.~L. Buckner, A.~M. Dale, R.~P. Maguire, B.~T. Hyman, et~al.
+\newblock An automated labeling system for subdividing the human cerebral
+  cortex on mri scans into gyral based regions of interest.
+\newblock {\em Neuroimage}, 31(3):968--980, 2006.
+
+\bibitem{dunn1973fuzzy}
+J.~C. Dunn.
+\newblock A fuzzy relative of the isodata process and its use in detecting
+  compact well-separated clusters.
+\newblock 1973.
+
+\bibitem{ErhanCBV10}
+D.~Erhan, A.~C. Courville, Y.~Bengio, and P.~Vincent.
+\newblock Why does unsupervised pre-training help deep learning?
+\newblock {\em Journal of Machine Learning Research - Proceedings Track},
+  9:201--208, 2010.
+
+\bibitem{gibou2002fast}
+F.~Gibou and R.~Fedkiw.
+\newblock A fast hybrid k-means level set algorithm for segmentation.
+\newblock In {\em 4th Annual Hawaii International Conference on Statistics and
+  Mathematics}, pages 281--291, 2002.
+
+\bibitem{GlorotB10}
+X.~Glorot and Y.~Bengio.
+\newblock Understanding the difficulty of training deep feedforward neural
+  networks.
+\newblock {\em Journal of Machine Learning Research - Proceedings Track},
+  9:249--256, 2010.
+
+\bibitem{glorot2011deep}
+X.~Glorot, A.~Bordes, and Y.~Bengio.
+\newblock Deep sparse rectifier networks.
+\newblock In {\em Proceedings of the 14th International Conference on
+  Artificial Intelligence and Statistics. JMLR W\&CP Volume}, volume~15, pages
+  315--323, 2011.
+
+\bibitem{GlorotBB11}
+X.~Glorot, A.~Bordes, and Y.~Bengio.
+\newblock Deep sparse rectifier neural networks.
+\newblock {\em Journal of Machine Learning Research - Proceedings Track},
+  15:315--323, 2011.
+
+\bibitem{GrosseRKN07}
+R.~Grosse, R.~Raina, H.~Kwong, and A.~Y. Ng.
+\newblock Shift-invariance sparse coding for audio classification.
+\newblock In {\em UAI}, pages 149--158, 2007.
+
+\bibitem{Hinton12}
+G.~E. Hinton.
+\newblock A practical guide to training restricted boltzmann machines.
+\newblock In {\em Neural Networks: Tricks of the Trade (2nd ed.)}, pages
+  599--619. 2012.
+
+\bibitem{hinton06}
+G.~E. Hinton, S.~Osindero, and Y.~W. Teh.
+\newblock A fast learning algorithm for deep belief nets.
+\newblock {\em Neural Computation}, 18(7):1527--1554, 2006.
+
+\bibitem{kpalma2007overview}
+K.~Kpalma, J.~Ronsin, et~al.
+\newblock An overview of advances of pattern recognition systems in computer
+  vision.
+\newblock {\em Vision Systems}, 2007.
+
+\bibitem{krizhevsky2012imagenet}
+A.~Krizhevsky, I.~Sutskever, and G.~Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in Neural Information Processing Systems 25}, pages
+  1106--1114, 2012.
+
+\bibitem{KrizhevskyNIPS12}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em NIPS}, pages 1106--1114, 2012.
+
+\bibitem{LarochelleB08}
+H.~Larochelle and Y.~Bengio.
+\newblock Classification using discriminative restricted boltzmann machines.
+\newblock In {\em ICML}, pages 536--543, 2008.
+
+\bibitem{lazebnik2006beyond}
+S.~Lazebnik, C.~Schmid, and J.~Ponce.
+\newblock Beyond bags of features: Spatial pyramid matching for recognizing
+  natural scene categories.
+\newblock In {\em Computer Vision and Pattern Recognition, 2006 IEEE Computer
+  Society Conference on}, volume~2, pages 2169--2178. IEEE, 2006.
+
+\bibitem{LeNCLPN11}
+Q.~V. Le, J.~Ngiam, A.~Coates, A.~Lahiri, B.~Prochnow, and A.~Y. Ng.
+\newblock On optimization methods for deep learning.
+\newblock In {\em ICML}, pages 265--272, 2011.
+
+\bibitem{LeRMDCCDN12}
+Q.~V. Le, M.~Ranzato, R.~Monga, M.~Devin, G.~Corrado, K.~Chen, J.~Dean, and
+  A.~Y. Ng.
+\newblock Building high-level features using large scale unsupervised learning.
+\newblock In {\em ICML}, 2012.
+
+\bibitem{LeCun12}
+Y.~LeCun.
+\newblock Learning invariant feature hierarchies.
+\newblock In {\em ECCV Workshops (1)}, pages 496--505, 2012.
+
+\bibitem{LeCunBOM12}
+Y.~LeCun, L.~Bottou, G.~B. Orr, and K.-R. M{\"u}ller.
+\newblock Efficient backprop.
+\newblock In {\em Neural Networks: Tricks of the Trade (2nd ed.)}, pages 9--48.
+  2012.
+
+\bibitem{Yann98}
+Y.~LeCun, P.~Haffner, L.~Bottou, and Y.~Bengio.
+\newblock Object recognition with gradient-based learning.
+\newblock In {\em Shape, Contour and Grouping in Computer Vision}, pages 319--,
+  1999.
+
+\bibitem{lowe1999object}
+D.~G. Lowe.
+\newblock Object recognition from local scale-invariant features.
+\newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
+  international conference on}, volume~2, pages 1150--1157. Ieee, 1999.
+
+\bibitem{mackay2003information}
+D.~J. MacKay.
+\newblock {\em Information theory, inference and learning algorithms}.
+\newblock Cambridge university press, 2003.
+
+\bibitem{martens2010deep}
+J.~Martens.
+\newblock Deep learning via hessian-free optimization.
+\newblock In {\em Proceedings of the 27th International Conference on Machine
+  Learning (ICML-10)}, pages 735--742, 2010.
+
+\bibitem{maurer2003linear}
+C.~R. Maurer~Jr, R.~Qi, and V.~Raghavan.
+\newblock A linear time algorithm for computing exact euclidean distance
+  transforms of binary images in arbitrary dimensions.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 25(2):265--270, 2003.
+
+\bibitem{NairH10}
+V.~Nair and G.~E. Hinton.
+\newblock Rectified linear units improve restricted boltzmann machines.
+\newblock In {\em ICML}, pages 807--814, 2010.
+
+\bibitem{olshausen1996emergence}
+B.~A. Olshausen et~al.
+\newblock Emergence of simple-cell receptive field properties by learning a
+  sparse code for natural images.
+\newblock {\em Nature}, 381(6583):607--609, 1996.
+
+\bibitem{pelleg1999accelerating}
+D.~Pelleg and A.~Moore.
+\newblock Accelerating exact k-means algorithms with geometric reasoning.
+\newblock In {\em Proceedings of the fifth ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 277--281. ACM, 1999.
+
+\bibitem{pelleg2000x}
+D.~Pelleg, A.~W. Moore, et~al.
+\newblock X-means: Extending k-means with efficient estimation of the number of
+  clusters.
+\newblock In {\em ICML}, pages 727--734, 2000.
+
+\bibitem{peng2005feature}
+H.~Peng, F.~Long, and C.~Ding.
+\newblock Feature selection based on mutual information criteria of
+  max-dependency, max-relevance, and min-redundancy.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 27(8):1226--1238, 2005.
+
+\bibitem{powers2011evaluation}
+D.~Powers.
+\newblock Evaluation: From precision, recall and f-measure to roc.,
+  informedness, markedness \& correlation.
+\newblock {\em Journal of Machine Learning Technologies}, 2(1):37--63, 2011.
+
+\bibitem{raina2009large}
+R.~Raina, A.~Madhavan, and A.~Y. Ng.
+\newblock Large-scale deep unsupervised learning using graphics processors.
+\newblock In {\em ICML}, volume~9, pages 873--880, 2009.
+
+\bibitem{RanzatoNIPS06}
+M.~Ranzato, C.~S. Poultney, S.~Chopra, and Y.~LeCun.
+\newblock Efficient learning of sparse representations with an energy-based
+  model.
+\newblock In {\em NIPS}, pages 1137--1144, 2006.
+
+\bibitem{rehn2007network}
+M.~Rehn and F.~T. Sommer.
+\newblock A network that uses few active neurones to code visual input predicts
+  the diverse shapes of cortical receptive fields.
+\newblock {\em Journal of computational neuroscience}, 22(2):135--146, 2007.
+
+\bibitem{seide2011conversational}
+F.~Seide, G.~Li, and D.~Yu.
+\newblock Conversational speech transcription using context-dependent deep
+  neural networks.
+\newblock In {\em INTERSPEECH}, pages 437--440, 2011.
+
+\bibitem{snoek2012practical}
+J.~Snoek, H.~Larochelle, and R.~P. Adams.
+\newblock Practical bayesian optimization of machine learning algorithms.
+\newblock {\em arXiv preprint arXiv:1206.2944}, 2012.
+
+\bibitem{Srivastava13}
+N.~Srivastava, R.~Salakhutdinov, and G.~E. Hinton.
+\newblock Modeling documents with deep boltzmann machines.
+\newblock {\em CoRR}, abs/1309.6865, 2013.
+
+\bibitem{SutskeverT10}
+I.~Sutskever and T.~Tieleman.
+\newblock On the convergence properties of contrastive divergence.
+\newblock {\em Journal of Machine Learning Research - Proceedings Track},
+  9:789--795, 2010.
+
+\end{thebibliography}

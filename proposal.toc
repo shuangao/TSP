@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Introduction to Image Filter}{2}
+\contentsline {subsection}{\numberline {1.1}Kernel Based Method for Image Recognition}{4}
+\contentsline {section}{\numberline {2}Deep Learning Feature Representation}{8}
+\contentsline {section}{\numberline {3}K-means Feature Representation}{12}
+\contentsline {subsection}{\numberline {3.1}learning the patches with K-Means}{12}
+\contentsline {subsection}{\numberline {3.2}Patch Combination}{13}
+\contentsline {subsection}{\numberline {3.3}Patch Ranking}{17}
+\contentsline {subsubsection}{\numberline {3.3.1}Unsupervised Patch Ranking}{17}
+\contentsline {subsubsection}{\numberline {3.3.2}Supervised Patch Ranking}{19}
+\contentsline {subsection}{\numberline {3.4}Encoding with the centroids}{22}
+\contentsline {section}{\numberline {4}Conclusion}{25}

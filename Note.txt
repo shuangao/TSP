@@ -1,0 +1,8 @@
+Personality Diagnosis for Personalized eHealth Service (try to cluster patients and apply recommendations)
+
+
+Usability of , real time calories estimation, food and physical activities, caloric balance = caloric consumption - caloric expenditure - resting metabolic rate, lookup food and activity, 
+Usability of a diabetes, Usability issues
+
+
+

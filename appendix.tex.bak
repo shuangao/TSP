@@ -1,0 +1,10 @@
+﻿\section{Some Patch Combination Results}
+\begin{figure}[h]
+ \centering
+  \subfigure{
+  \includegraphics[scale = .5]{fig/combine2.png}}
+  subfigure{
+  \includegraphics[scale = .5]{fig/combine.png}
+   }
+  \caption{Combination of patches}
+\end{figure}

@@ -1,0 +1,13 @@
+﻿This TSP has mainly cover three parts of work:
+\begin{itemize}
+  \item In Section \ref{sec:intro}, some concepts and the kernel based image filtering technique are introduced. The kernel based image process method is the most important technique in image recognition which is widely used in feature extraction. Kernels are often used in convolutional neural network which can be implemented very fast with the help of GPU. Therefore, the large convolutional neural network is the first choice for large real world image learning task. 
+  \item In Section \ref{dl}, the deep learning method is introduced. Deep learning is the state-of-the-art and the most popular model for image recognition. It shows great power on both learning the features and image representation. Deep learning uses the stacked RBM to learning the hierarchical feature representation and use the Contrastive Divergence strategy to training the model in an unsupervised way. This feature learning idea has given inspiration to many other unsupervised feature extract methods as well as the method proposed in Section \ref{km}.
+  \item In the Section \ref{km}, the kmeans based feature extract method is proposed. Inspired by the unsupervised feature extraction idea in Deep learning, I try to use kmeans to find the templates as the features for image representation. The patch combination can be the novel part of this method which combines the centroids in different location to generate the "super patch". After patch combination, the unsupervised and supervised patch ranking methods are used to eliminate the sparse, redundant and irrelevant centriods. Finally the encoding methods is introduced.
+\end{itemize}
+
+In the kmeans based feature representation method, there are less hyperparemeters so that the background knowledge becomes less important. Still there are many challenges for this method: 
+\begin{itemize}
+  \item In patch ranking, even though, the bad centroids and irrelevant ones are ranked low, it is still unknow for us to know what is the optimal number of features get for learning the specific problem without the help of learning curve. Thus there are a lot of work to determine the optimal number of features for this method. In my future work, some score may be used to evaluate the centroids.
+  \item There is still no good solution for the encoding problem as its complexity. There are too many variables that need to be considered and still many work for me to find the best metric for the similarity measurement.
+\end{itemize}
+In the next few terms, all these problems above should be the main work for me and hopefully, with the supervision of Dr. Charles Ling, I can find some solutions for them and improve this method. 

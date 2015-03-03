@@ -1,0 +1,28 @@
+﻿No matter what classification techniques it is used, the images have to be transformed into certain kind of feature vectors with one of the
+methodologies mentioned above. Image filtering (also called \emph{kernel}) allows you to apply various effects on photos. In a 2D image, the 2D filter matrix \emph{f}
+ can be applied with a convolutionary operation on the image \emph{I}:
+\begin{equation}\label{eq:conv}
+\left( {f * I} \right)\left( {x,y} \right) = \iint {f(x,y)I(x - t,y - t)dt}
+\end{equation} 
+
+\begin{table}
+  \centering
+\begin{tabular}{|c| c| c|}
+  \hline
+  original & $\left[ {\begin{array}{ccc}  0&0&0 \\  0&1&0 \\  0&0&0\end{array}} \right] $ &\parbox[c]{5em}{\includegraphics[scale=1.5]{fig/orig.png}}\\
+  \hline
+  edge detect & $\left[ {\begin{array}{ccc}  -1&-1&-1 \\  -1&8&-1 \\  -1&-1&-1\end{array}} \right] $ & \parbox[c]{5em}{\includegraphics[scale=1.5]{fig/edge.png}}\\
+  \hline
+  blur & $\left[ {\begin{array}{ccc}  1&1&1 \\  -1&1&1 \\  1&1&1 \end{array}} \right] $ & \parbox[c]{5em}{\includegraphics[scale=1.5]{fig/blur.png}}\\
+  \hline
+\end{tabular}
+  \caption{Apply filters on image}\label{kl}
+\end{table}
+
+For a image classification task, the key issue is to find the most useful features to present the image.
+ \begin{figure}
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.6]{fig/proces.jpg}\\
+  \caption{Image Classification Procedue}
+\end{figure}
